@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="172.0" prefWidth="778.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="245.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NBA" textAlignment="CENTER" wrappingWidth="288.6708984375">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="351.0" prefWidth="464.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="329.0" fitWidth="431.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagines/social_share_default.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="351.0" prefWidth="341.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="85.0" layoutY="149.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="145.0" style="-fx-background-color: Red;" text="INICIO" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
