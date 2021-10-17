@@ -1,6 +1,6 @@
 # FIBA-Manager
 
-![pinterest_profile_image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepng.es%2Fpng-pzmt5q%2F&psig=AOvVaw1p-5OtnIao3_qbqXMLS3Kt&ust=1634514735011000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCLCtyoOQ0PMCFQAAAAAdAAAAABAD)
+![pinterest_profile_image](https://github.com/BrianR18/FIBA-Manager/blob/master/Images/Images%20Interface/LoadingImage.png)
 
 _Program to manage databases of basketball players_
 
