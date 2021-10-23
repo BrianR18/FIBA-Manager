@@ -59,6 +59,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public void delete(BSTNode<T,S> keyToDelete){
+
         //Case 1
         if(keyToDelete.getLeft() == null && keyToDelete.getRight()==null){
             BSTNode<T,S> parent = keyToDelete.getParent();
@@ -67,22 +68,84 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
             }else{
                 parent.setRight(null);
             }
+        }else{
+            if(keyToDelete.getLeft()!=null && keyToDelete.getRight()!=null) {
+                delete3(keyToDelete);
+        	}else {
+        		delete2(keyToDelete);
+            }
+        }
+    }
+
+
+
+
+    private void delete2(BSTNode<T,S> keyToDelete) {
+        //Case 2
+        BSTNode<T,S> parent = keyToDelete.getParent();
+        if(parent.getRight()==keyToDelete) {
+            if(keyToDelete.getLeft()!=null) {
+                parent.setRight(keyToDelete.getLeft());
+                keyToDelete.getLeft().setParent(parent);
+                setNull(keyToDelete);
+            }else {
+                if(keyToDelete.getRight()!=null) {
+                    parent.setRight(keyToDelete.getRight());
+                    keyToDelete.getRight().setParent(parent);
+                    setNull(keyToDelete);
+                }
+            }
+        }else {
+            if(parent.getLeft()==keyToDelete) {
+                if(keyToDelete.getLeft()!=null) {
+                    parent.setLeft(keyToDelete.getLeft());
+                    keyToDelete.getLeft().setParent(parent);
+                    setNull(keyToDelete);
+                }else {
+                    if(keyToDelete.getRight()!=null) {
+                        parent.setLeft(keyToDelete.getRight());
+                        keyToDelete.getRight().setParent(parent);
+                        setNull(keyToDelete);
+                    }
+                }
+            }
+        }
+    }
+
+    private void delete3(BSTNode<T,S> keyToDelete) {
+        //Case 3
+        BSTNode<T, S> parent = keyToDelete.getParent();
+        BSTNode<T, S> successor = getSuccessor(keyToDelete);
+        if (parent.getRight() == keyToDelete) {
+           parent.setRight(successor);
+           successor.setLeft(keyToDelete.getLeft());
+           successor.setParent(parent);
+           successor.getLeft().setParent(successor);
+           setNull(keyToDelete);
+        }else{
+            if(parent.getLeft()==keyToDelete){
+                parent.setLeft(successor);
+                successor.setLeft(keyToDelete.getLeft());
+                successor.setParent(parent);
+                successor.getLeft().setParent(successor);
+                setNull(keyToDelete);
+            }
         }
     }
 
 
     @Override
-    public T getSuccessor(BSTNode<T,S> value) {
+    public BSTNode<T,S> getSuccessor(BSTNode<T,S> value) {
         if(search(value.getKey())!=null) {
             if (value.getRight() != null) {
-                return getMinimum(value.getRight()).getValue();
+                return getMinimum(value.getRight());
             } else {
                 BSTNode<T, S> parent = value.getParent();
                 while (parent != null && value == parent.getRight()) {
                     value = parent;
                     parent = parent.getParent();
                 }
-                return parent.getValue();
+                return parent;
             }
         }return null;
     }
@@ -128,6 +191,15 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     public BSTNode<T, S> getRoot() {
         return root;
+    }
+
+    private void setNull(BSTNode<T,S> value){
+        value.setParent(null);
+        value.setValue(null);
+        value.setLeft(null);
+        value.setRight(null);
+        value.setKey(null);
+        value = null;
     }
 
 }
