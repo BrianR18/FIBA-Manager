@@ -16,11 +16,14 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             insert(super.getRoot(), nodeToAdd);
         }
     }//End insert
+
     private void insert(BSTNode<T,S> actualNode, BSTNode<T,S> nodeToAdd) {
         if ((actualNode.getKey().compareTo(nodeToAdd.getKey()))<0) {
             if (actualNode.getRight() == null) {
                 actualNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
+                if(Math.abs(balanceFactor(actualNode)) > 1)
+                    rebalanced(actualNode);
             } else {
                 insert(actualNode.getRight(), nodeToAdd);
             }
@@ -31,7 +34,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             } else {
                 insert(actualNode.getLeft(), nodeToAdd);
             }
-        }
+        }//End else
     }//End insert
 
     @Override
