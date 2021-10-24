@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/UML/BasketManager.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Collections/BBT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collections/BBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BBT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collections/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="io.unthrottled.amii.config.ui.PluginSettingsUI" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="false" />
