@@ -39,8 +39,32 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
 
     @Override
     public void delete(BSTNode<T,S> keyToDelete){
-
+        BSTNode<T,S> p = keyToDelete.getParent();
+        if(super.isLeaf(keyToDelete)){
+            if(p == keyToDelete){super.setRoot(null);}
+            else if(p.getLeft() == keyToDelete ){p.setLeft(null);}
+            else {p.setRight(null);}
+        }else if(keyToDelete.getLeft() == null || keyToDelete.getRight() == null){
+            BSTNode<T,S> newChildren = (keyToDelete.getLeft() != null)?keyToDelete.getLeft():keyToDelete.getRight();
+            if(p.getLeft() == keyToDelete){ p.setLeft(newChildren);}
+            else {p.setRight(newChildren);}
+            newChildren.setParent(p);
+        }else{
+            BSTNode<T,S> newRoot = (getNewRoot(keyToDelete.getLeft()));
+            if(p.getLeft() == keyToDelete){ p.setLeft(newRoot);}
+            else {p.setRight(newRoot);}
+            newRoot.setParent(p);
+        }//End else
+        if(p != null && Math.abs(balanceFactor(p)) > 1 )
+            rebalanced(p);
     }//End delete
+
+    private BSTNode<T,S> getNewRoot(BSTNode<T,S> currentRoot){
+        if(currentRoot.getRight() == null){
+            return currentRoot;
+        }else
+            return getNewRoot(currentRoot.getRight());
+    }//End getNewRoot
 
     public int balanceFactor(BSTNode<T,S> subTreeRoot){
         int bf = 0;
