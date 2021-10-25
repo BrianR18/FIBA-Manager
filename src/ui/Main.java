@@ -12,7 +12,7 @@ import model.FIBA;
 
 public class Main extends Application {
 
-    private FIBAGUI FIBAGUI;
+    private final FIBAGUI FIBAGUI;
     private FIBA FIBA;
 
     public Main() throws ClassNotFoundException, IOException {

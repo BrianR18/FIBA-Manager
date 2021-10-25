@@ -9,7 +9,7 @@ public class BSTTest {
     }
 
     @Test
-    public void insertTest() {
+    public void insertTest() {a
 
         BST<String, Integer> bst = setupStage1();
         bst.insert("a",3);

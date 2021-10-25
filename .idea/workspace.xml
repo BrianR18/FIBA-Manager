@@ -14,8 +14,12 @@
       <change afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/ui/Serch.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/FIBA-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FIBA-Manager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BSTTest.class" beforeDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,11 +149,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BSTTest.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FIBA-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Collections.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Collections" />
+      <option name="MAIN_CLASS_NAME" value="Collections.BSTTest" />
+      <option name="METHOD_NAME" value="insertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
         <item itemvalue="JUnit.BSTTest" />
+        <item itemvalue="JUnit.BSTTest.insertTest" />
         <item itemvalue="JUnit.BSTTest.deleteTest3" />
         <item itemvalue="JUnit.BSTTest.deleteTest2" />
       </list>
