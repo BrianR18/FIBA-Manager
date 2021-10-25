@@ -17,7 +17,9 @@
       <change beforePath="$PROJECT_DIR$/FIBA-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FIBA-Manager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BSTTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Collections/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collections/BSTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BSTTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Collections/MainTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +73,7 @@
       <recent name="C:\Users\Janna\Desktop\CUARTO SEMESTRE\Estructuras de datos\Programas\TI2\FIBA-Manager\src\Collections\BST" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.Main" />
       <module name="FIBA-Manager" />
@@ -145,13 +147,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BSTTest.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FIBA-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Collections.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Collections" />
+      <option name="MAIN_CLASS_NAME" value="Collections.BSTTest" />
+      <option name="METHOD_NAME" value="insertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainTest" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
         <item itemvalue="JUnit.BSTTest" />
-        <item itemvalue="JUnit.BSTTest.deleteTest3" />
+        <item itemvalue="JUnit.BSTTest.insertTest" />
       </list>
     </recent_temporary>
   </component>
