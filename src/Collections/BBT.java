@@ -8,31 +8,33 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
 
     @Override
     public void insert(T node, S key){
+        System.out.println("Se agregara el "+node);
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (super.getRoot() == null) {
             super.setRoot(nodeToAdd);
-            super.getRoot().setParent(super.getRoot());
+            super.getRoot().setParent(null);
         } else {
             insert(super.getRoot(), nodeToAdd);
         }
     }//End insert
 
-    private void insert(BSTNode<T,S> actualNode, BSTNode<T,S> nodeToAdd) {
-        if ((actualNode.getKey().compareTo(nodeToAdd.getKey()))<0) {
-            if (actualNode.getRight() == null) {
-                actualNode.setRight(nodeToAdd);
-                nodeToAdd.setParent(actualNode);
-                if(Math.abs(balanceFactor(actualNode)) > 1)
-                    rebalanced(actualNode);
+    private void insert(BSTNode<T,S> currentNode, BSTNode<T,S> nodeToAdd) {
+        System.out.println("Entra a insertar recursivo");
+        if ((currentNode.getKey().compareTo(nodeToAdd.getKey()))<0) {
+            if (currentNode.getRight() == null) {
+                currentNode.setRight(nodeToAdd);
+                nodeToAdd.setParent(currentNode);
+                if(Math.abs(balanceFactor(currentNode.getParent())) > 1)
+                    rebalanced(currentNode.getParent());
             } else {
-                insert(actualNode.getRight(), nodeToAdd);
+                insert(currentNode.getRight(), nodeToAdd);
             }
         } else {
-            if (actualNode.getLeft() == null) {
-                actualNode.setLeft(nodeToAdd);
-                nodeToAdd.setParent(actualNode);
+            if (currentNode.getLeft() == null) {
+                currentNode.setLeft(nodeToAdd);
+                nodeToAdd.setParent(currentNode);
             } else {
-                insert(actualNode.getLeft(), nodeToAdd);
+                insert(currentNode.getLeft(), nodeToAdd);
             }
         }//End else
     }//End insert
@@ -41,7 +43,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
     public void delete(BSTNode<T,S> keyToDelete){
         BSTNode<T,S> p = keyToDelete.getParent();
         if(super.isLeaf(keyToDelete)){
-            if(p == keyToDelete){super.setRoot(null);}
+            if(p == null){super.setRoot(null);}
             else if(p.getLeft() == keyToDelete ){p.setLeft(null);}
             else {p.setRight(null);}
         }else if(keyToDelete.getLeft() == null || keyToDelete.getRight() == null){
@@ -66,9 +68,9 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             return getNewRoot(currentRoot.getRight());
     }//End getNewRoot
 
-    public int balanceFactor(BSTNode<T,S> subTreeRoot){
+    private int balanceFactor(BSTNode<T,S> subTreeRoot){
         int bf = 0;
-        if(!super.isLeaf(subTreeRoot)){
+        if(subTreeRoot != null && !super.isLeaf(subTreeRoot)){
             int rh = (subTreeRoot.getRight()!= null)?super.bstHeight(subTreeRoot.getRight()):0;
             int lh = (subTreeRoot.getLeft()!= null)?super.bstHeight(subTreeRoot.getLeft()):0;
             bf = rh - lh;
@@ -76,36 +78,92 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
         return bf;
     }//End balanceFactor
 
-    public void rightRotate(BSTNode<T,S> subTreeRoot){
-        BSTNode<T,S> aux = subTreeRoot;
-        subTreeRoot = subTreeRoot.getLeft();
-        aux.setLeft(subTreeRoot.getRight());
-        subTreeRoot.setRight(aux);
+    private void rightRotate(BSTNode<T,S> subTreeRoot){
+        BSTNode<T,S> p = subTreeRoot.getParent();
+        if(p != null){//If subTreeRoot isn't the tree root
+            rightRotateNotRoot(subTreeRoot,p);
+        }else{
+            BSTNode<T,S>  y = super.getRoot().getLeft();
+            super.setRoot(y);
+            if(y.getRight() != null){
+                subTreeRoot.setLeft(y.getRight());
+                subTreeRoot.getLeft().setParent(subTreeRoot);
+            }else
+                subTreeRoot.setLeft(null);
+            super.getRoot().setRight(subTreeRoot);
+            subTreeRoot.setParent(y);
+        }//End if..else
     }//rightRotate
 
-    public void leftRotate(BSTNode<T,S> subTreeRoot){
-        BSTNode<T,S> aux = subTreeRoot;
-        subTreeRoot = subTreeRoot.getRight();
-        aux.setRight(subTreeRoot.getLeft());
-        subTreeRoot.setLeft(aux);
+    private void leftRotate(BSTNode<T,S> subTreeRoot){
+        BSTNode<T,S> p = subTreeRoot.getParent();
+        if(p != null){//If subTreeRoot isn't the tree root
+            leftRotateNotRoot(subTreeRoot,p);
+        }else{
+            BSTNode<T,S>  y = super.getRoot().getRight();
+            super.setRoot(y);
+            if(y.getLeft() != null){
+                subTreeRoot.setRight(y.getLeft());
+                subTreeRoot.getRight().setParent(subTreeRoot);
+            }else
+                subTreeRoot.setRight(null);
+            super.getRoot().setLeft(subTreeRoot);
+            subTreeRoot.setParent(y);
+        }//End if..else
     }//rightRotate
 
-    public void rebalanced(BSTNode<T,S> subTreeRoot){
-        int Rfb = balanceFactor(subTreeRoot);
-        if(Rfb < -1 || Rfb > 1){
-            int lfb = balanceFactor(subTreeRoot.getLeft());
-            int rfb = balanceFactor(subTreeRoot.getRight());
-            if(Rfb == 2 && rfb != -1){leftRotate(subTreeRoot);}
-            else if(Rfb == 2 && rfb == -1){
-                rightRotate(subTreeRoot.getRight());
-                leftRotate(subTreeRoot);
-            }else if(Rfb == -2 && lfb != 1){rightRotate(subTreeRoot);}
-            else if(Rfb == -2 && lfb == 1){
-                leftRotate(subTreeRoot.getLeft());
-                rightRotate(subTreeRoot);
-            }//End else..if
-            if(subTreeRoot.getParent()!= subTreeRoot)
-                rebalanced(subTreeRoot.getParent());
-        }//End if
+    private void leftRotateNotRoot(BSTNode<T,S> subTreeRoot, BSTNode<T,S> subTreeParent){
+        boolean direction = subTreeParent.getLeft() == subTreeRoot;
+        if(direction){subTreeParent.setLeft(subTreeRoot.getRight());}
+        else{subTreeParent.setRight(subTreeRoot.getRight());}
+        subTreeRoot.getRight().setParent(subTreeParent);
+        subTreeRoot.setRight(subTreeRoot.getRight().getLeft());
+        subTreeRoot.getRight().setParent(subTreeRoot);
+        if(direction){
+            subTreeParent.getLeft().setLeft(subTreeRoot);
+            subTreeRoot.setParent(subTreeParent.getLeft());
+        } else{
+            subTreeParent.getRight().setLeft(subTreeRoot);
+            subTreeRoot.setParent(subTreeParent.getRight());
+        }//End if..else
+    }//End leftRotateNotRoot
+
+    private void rightRotateNotRoot(BSTNode<T,S> subTreeRoot, BSTNode<T,S> subTreeParent){
+        boolean direction = subTreeParent.getLeft() == subTreeRoot;
+        if(direction){subTreeParent.setLeft(subTreeRoot.getLeft());}
+        else{subTreeParent.setRight(subTreeRoot.getLeft());}
+        subTreeRoot.getLeft().setParent(subTreeParent);
+        subTreeRoot.setLeft(subTreeRoot.getLeft().getRight());
+        subTreeRoot.getLeft().setParent(subTreeRoot);
+        if(direction){
+            subTreeParent.getLeft().setRight(subTreeRoot);
+            subTreeRoot.setParent(subTreeParent.getRight());
+        } else{
+            subTreeParent.getRight().setRight(subTreeRoot);
+            subTreeRoot.setParent(subTreeParent.getLeft());
+        }//End if..else
+    }//End rightRotateNotRoot
+
+    private void rebalanced(BSTNode<T,S> subTreeRoot) {
+        int bf = balanceFactor(subTreeRoot);
+        if(bf < -1 || bf > 1){
+            if(bf == 2){//case unbalanced on right node
+                int rbf = balanceFactor(subTreeRoot.getRight());
+                if(rbf == 0 || rbf == 1)
+                    leftRotate(subTreeRoot);
+                else{
+                    rightRotate(subTreeRoot.getRight());
+                    leftRotate(subTreeRoot);
+                }//End else
+            }else{//case unbalanced on left node
+                int lbf = balanceFactor(subTreeRoot.getLeft());
+                if(lbf == 0 || lbf == -1)
+                    rightRotate(subTreeRoot);
+                else{
+                    leftRotate(subTreeRoot.getLeft());
+                    rightRotate(subTreeRoot);
+                }//End else
+            }//End case unbalanced on left node
+        }//End if subtree unbalanced
     }//End rebalanced
 }//End Balance binary tree

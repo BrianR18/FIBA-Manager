@@ -9,7 +9,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (root == null) {
             root = nodeToAdd;
-            root.setParent(root);
+            root.setParent(null);
         } else {
             insert(root, nodeToAdd);
         }
@@ -190,7 +190,9 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     }
 
     public void setRoot(BSTNode<T,S> root){
+        System.out.println("El valor "+root.getValue()+" se ha vuelto raiz");
         this.root = root;
+        this.root.setParent(null);
     }
 
     public BSTNode<T, S> getRoot() {
