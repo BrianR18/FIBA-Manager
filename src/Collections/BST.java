@@ -190,7 +190,6 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     }
 
     public void setRoot(BSTNode<T,S> root){
-        System.out.println("El valor "+root.getValue()+" se ha vuelto raiz");
         this.root = root;
         this.root.setParent(null);
     }

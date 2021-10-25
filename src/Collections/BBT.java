@@ -8,7 +8,6 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
 
     @Override
     public void insert(T node, S key){
-        System.out.println("Se agregara el "+node);
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (super.getRoot() == null) {
             super.setRoot(nodeToAdd);
@@ -19,13 +18,11 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
     }//End insert
 
     private void insert(BSTNode<T,S> currentNode, BSTNode<T,S> nodeToAdd) {
-        System.out.println("Entra a insertar recursivo");
         if ((currentNode.getKey().compareTo(nodeToAdd.getKey()))<0) {
             if (currentNode.getRight() == null) {
                 currentNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
-                if(Math.abs(balanceFactor(currentNode.getParent())) > 1)
-                    rebalanced(currentNode.getParent());
+                rebalanced(currentNode.getParent());
             } else {
                 insert(currentNode.getRight(), nodeToAdd);
             }
