@@ -9,7 +9,7 @@
    <children>
       <ImageView fitHeight="398.0" fitWidth="716.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../FIBA-Manager/Images/Images%20Interface/MainMenu.png" />
+            <Image url="@image/MainMenu.png" />
          </image>
       </ImageView>
       <Button layoutX="76.0" layoutY="110.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="220.0" prefWidth="172.0" style="-fx-background-color: transparent;" />
