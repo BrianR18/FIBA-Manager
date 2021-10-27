@@ -32,16 +32,12 @@ public class Main extends Application{
 
 			fxmlLoader.setController(FIBAGUI);
 			Parent root = fxmlLoader.load();
-			
-			Scene scene = new Scene(root, 705, 410);
-			
-	        
-	        
+			Scene scene = new Scene(root, 1160, 650);
+			Image icon= new Image("/ui/image/FIBA.jpeg");
+			primaryStage.getIcons().add(icon);
 			primaryStage.setScene(scene);
-			
-			
 			primaryStage.setTitle("Federacion Internacional de Baloncesto");
-			
+			primaryStage.setResizable(false);
 			primaryStage.show();
 			
 			

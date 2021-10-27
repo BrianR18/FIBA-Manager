@@ -75,7 +75,7 @@
       <recent name="C:\Users\Janna\Desktop\CUARTO SEMESTRE\Estructuras de datos\Programas\TI2\FIBA-Manager\src\Collections\BST" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main2">
+  <component name="RunManager" selected="JUnit.BSTTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.Main" />
       <module name="FIBA-Manager" />
@@ -103,14 +103,21 @@
       </method>
     </configuration>
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Collections.MainTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BSTTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Collections.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,6 +172,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main2" />
+        <item itemvalue="JUnit.BSTTest (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
         <item itemvalue="Application.MainTest" />
