@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,9 +10,20 @@
    <children>
       <ImageView fitHeight="406.0" fitWidth="666.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../FIBA-Manager/Images/Images%20Interface/AddPlayer.png" />
+            <Image url="@image/AddPlayer.png" />
          </image>
       </ImageView>
       <Button layoutX="629.0" layoutY="26.0" mnemonicParsing="false" onAction="#behind" prefHeight="38.0" prefWidth="31.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="addName" alignment="CENTER" layoutX="98.0" layoutY="212.0" prefHeight="31.0" prefWidth="207.0" promptText="Nombre " />
+      <TextField fx:id="AddYear" alignment="CENTER" layoutX="98.0" layoutY="254.0" prefHeight="31.0" prefWidth="207.0" promptText="Edad" />
+      <TextField fx:id="AddEquipo" alignment="CENTER" layoutX="98.0" layoutY="302.0" prefHeight="31.0" prefWidth="207.0" promptText="Equipo" />
+      <TextField fx:id="addEsta1" alignment="CENTER" layoutX="422.0" layoutY="138.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 1" />
+      <TextField fx:id="addEsta2" alignment="CENTER" layoutX="422.0" layoutY="181.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 2" />
+      <TextField fx:id="addEsta3" alignment="CENTER" layoutX="422.0" layoutY="228.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 3" />
+      <TextField fx:id="addEsta4" alignment="CENTER" layoutX="422.0" layoutY="270.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 4" />
+      <TextField fx:id="addEsta5" alignment="CENTER" layoutX="422.0" layoutY="318.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 5" />
+      <Button layoutX="283.0" layoutY="26.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="87.0" prefWidth="124.0" style="-fx-background-color: transaparent;" />
+      <Button layoutX="476.0" layoutY="26.0" mnemonicParsing="false" onAction="#confi" prefHeight="87.0" prefWidth="124.0" style="-fx-background-color: transparent;" text="Button" />
+      <Button layoutX="98.0" layoutY="159.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="207.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>
