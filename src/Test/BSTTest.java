@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BSTTest {
+
     public <T,S extends Comparable<S>> BST<T,S> setupStage1(){
         return new BST<T,S>();
     }
@@ -20,6 +21,7 @@ public class BSTTest {
         assertEquals("a", bst.getRoot().getValue());
         assertEquals( "b" , bst.getRoot().getLeft().getValue());
         assertEquals("c", bst.getRoot().getRight().getValue());
+
     }
 
     @Test
@@ -187,4 +189,6 @@ public class BSTTest {
         assertNull(tree.search(1));
         assertNull(tree.search(5).getLeft());
     }
+
+
 }
