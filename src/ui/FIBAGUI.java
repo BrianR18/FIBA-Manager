@@ -1,16 +1,22 @@
 package ui;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import Thread.Progress;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import model.FIBA;
 
 
@@ -67,15 +73,46 @@ public class FIBAGUI {
 
 	    @FXML
 	    void confi(ActionEvent event) throws IOException {
-	    	
+
 	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Config.fxml"));
 	        fxmlLoader.setController(this);
 	        Parent form = fxmlLoader.load();
 	        pane.setCenter(form);
+			Stage st = (Stage) form.getScene().getWindow();
+			st.setWidth(1200);
+			st.setHeight(690);
 
 	    }
 
-	    @FXML
+		@FXML
+		public void credits(ActionEvent event) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Alert");
+			alert.setHeaderText(null);
+			alert.setContentText("Creditos a" +
+					"\nBrian Stiven Romero" +
+					"\nDaniel Ramirez" +
+					"\nSebastian Navia");
+
+			alert.showAndWait();
+		}
+
+		@FXML
+		void infoApli(ActionEvent event) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+
+			alert.setTitle("FIBA-Manager");
+			alert.setHeaderText(null);
+			alert.setContentText("        " +
+					"\nAplicacion para gestionar base de datos" +
+					"\nde jugadores de basketbol,  registrados " +
+					"\nen la FIBA");
+
+			alert.showAndWait();
+		}
+
+
+	@FXML
 	     void sherchPlayer(ActionEvent event) throws IOException {
 	    	
 	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Serch.fxml"));
@@ -94,6 +131,37 @@ public class FIBAGUI {
 			pane.setCenter(login1);
 
 	    }
+
+
+		/*@FXML
+		void behind(ActionEvent event)throws Exception{
+
+			try {
+				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Exit.fxml"));
+				Parent root = fxmlLoader.load();
+
+
+				Scene scene = new Scene(root);
+				Stage stage = new Stage();
+				stage.initModality(Modality.APPLICATION_MODAL);
+				stage.setScene(scene);
+				stage.showAndWait();
+
+			}catch (IOException ex) {
+
+				Logger.getLogger(FIBAGUI.class.getName()).log(Level.SEVERE,null, ex);
+
+			}
+		}*/
+		@FXML
+		void Cancel(ActionEvent event) {
+
+		}
+
+		@FXML
+		void SaveExit(ActionEvent event) {
+
+		}
 	    
 	    //________________________________________________
 	    
@@ -116,6 +184,18 @@ public class FIBAGUI {
 	        alert.setContentText("User successfully registered");
 	        alert.showAndWait();
 	    }
+
+
+
+	@FXML
+	void Exp(ActionEvent event) {
+
+	}
+
+	@FXML
+	void Imp(ActionEvent event) {
+
+	}
 	    
 	   /* public void addClotheShirt(ActionEvent event) throws IOException {
 	        if (!txtShirtFabricType.getText().equals("") && !txtShirtStyle.getText().equals("") && !txtShirtType.getText().equals("")) {
@@ -130,23 +210,23 @@ public class FIBAGUI {
 	        } else {
 	            youNeedToFillTextFields(event);
 	        }
-	    }*/
+	    }
 
 
 
 	    
 	    @FXML
 	        public void initializeTabbleViewAccessories() {
-//	        	ObservableList<Accessories> observableList;
-//	        	observableList =  FXCollections.observableArrayList(market.getAcc());
-//
-//	        	tableAccessoriesSeller.setItems(observableList);
-//	        	tcNameAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Name"));
-//	        	tcCodeAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Code"));
-//	        	tcPriceAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,Double>("Price"));
-//	        	tcBrandAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Brand"));
-//	        	tcTypeAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Type"));
-	        }
+	        	ObservableList<Accessories> observableList;
+	        	observableList =  FXCollections.observableArrayList(market.getAcc());
+
+	        	tableAccessoriesSeller.setItems(observableList);
+	        	tcNameAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Name"));
+	        	tcCodeAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Code"));
+	        	tcPriceAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,Double>("Price"));
+	        	tcBrandAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Brand"));
+	        	tcTypeAccessoriesSeller.setCellValueFactory(new PropertyValueFactory<Accessories,String>("Type"));
+	        }*/
 
 	    
 
