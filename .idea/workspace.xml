@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FIBA-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FIBA-Manager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Images/Images Interface/AddPlayer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/AddPlayer.png" afterDir="false" />
@@ -29,6 +30,12 @@
       <change beforePath="$PROJECT_DIR$/src/ui/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Serch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Serch.fxml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Images/Images Interface/owo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BSTTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collections/BSTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/BSTTest.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +77,14 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/runtime/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReaderModeSettings">
@@ -84,7 +95,7 @@
       <recent name="C:\Users\Janna\Desktop\CUARTO SEMESTRE\Estructuras de datos\Programas\TI2\FIBA-Manager\src\Collections\BST" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BSTTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.Main" />
       <module name="FIBA-Manager" />
@@ -103,7 +114,7 @@
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Collections.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +126,12 @@
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Collections.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Collections" />
-      <option name="MAIN_CLASS_NAME" value="Collections.BSTTest" />
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,12 +141,12 @@
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Collections.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Collections" />
-      <option name="MAIN_CLASS_NAME" value="Collections.BSTTest" />
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
       <option name="METHOD_NAME" value="deleteTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -146,12 +157,12 @@
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Collections.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Collections" />
-      <option name="MAIN_CLASS_NAME" value="Collections.BSTTest" />
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
       <option name="METHOD_NAME" value="insertTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -176,10 +187,14 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BSTTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
+<<<<<<< Updated upstream
         <item itemvalue="Application.MainTest" />
         <item itemvalue="JUnit.BSTTest" />
+=======
+>>>>>>> Stashed changes
         <item itemvalue="JUnit.BSTTest.insertTest" />
       </list>
     </recent_temporary>

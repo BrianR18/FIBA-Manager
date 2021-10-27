@@ -1,4 +1,5 @@
-package Collections;
+package Test;
+import Collections.BST;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
