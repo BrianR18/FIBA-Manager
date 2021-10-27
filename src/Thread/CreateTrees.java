@@ -7,14 +7,14 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
 
-public class CreateAVLTree extends Thread{
+public class CreateTrees extends Thread{
 
-    private BBT<Integer,Integer> avlTree;
+    private BST<Integer,Integer> tree;
     private final int index;
     private final File currentFilePath;
-    public CreateAVLTree(BBT<Integer,Integer> avlTree,int i,File path){
+    public CreateTrees(BST<Integer,Integer> tree,int i,File path){
         index = i;
-        this.avlTree = avlTree;
+        this.tree = tree;
         currentFilePath = path;
     }//CreateAVLTree
 
@@ -32,8 +32,9 @@ public class CreateAVLTree extends Thread{
         String currentLine = br.readLine();
         for(int i = 1; currentLine != null; i++){
             String[] playerData = currentLine.split(";");
-            avlTree.insert(Integer.parseInt(playerData[index]),i);
+            tree.insert(Integer.parseInt(playerData[index]),i);
             currentLine = br.readLine();
         }//End for
+        br.close();
     }//End createAVLBlocksPerGame
 }//End CreateAVLTree

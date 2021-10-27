@@ -1,11 +1,12 @@
 package model;
 import Collections.BBT;
 import Collections.BST;
-import Thread.CreateAVLTree;
+import Thread.CreateTrees;
 import java.io.*;
 import java.util.ArrayList;
 
 public class FIBA {
+    private final String separator = ";";
     private BST<Integer,Integer> BSTBlockGame;//bg
     private BBT<Integer,Integer> AVLAssistsGame;//ag
     private BBT<Integer,Integer> AVLPointMatch;//pm
@@ -27,16 +28,25 @@ public class FIBA {
     }//End FIBA constructor
 
     public void addPlayer(String name, int age,String team, int pointMatch,
-                          int assistsGame, int reboundsGame, int steelGame, int blockGame){
-
+                          int assistsGame, int reboundsGame, int steelGame, int blockGame) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(currentFilePath,true));
+        int k = countLines() + 1;
+        bw.write("\n"+name+separator+age+separator+team+separator+pointMatch+separator+assistsGame
+                +separator+reboundsGame+separator+steelGame+separator+blockGame);
+        AVLAssistsGame.insert(assistsGame,k);
+        AVLPointMatch.insert(pointMatch,k);
+        AVLReboundsGame.insert(reboundsGame,k);
+        AVLSteelGame.insert(steelGame,k);
+        bw.close();
     }//End addPlayer
 
     public void importDataFile(File data){
         currentFilePath = data;
-        createAVLTrees();
+        createTrees();
     }//End importDataFile
 
-    public ArrayList<String> getPlayersByBlocksPerGame(int key){
+    public ArrayList<Player> getPlayersByBlocksPerGame(int key){
+
         return null;
     }//End getPlayersByBlocksPerGame
 
@@ -56,15 +66,25 @@ public class FIBA {
         return null;
     }//End getPlayersBySteelsPerGame
 
-    private void createAVLTrees(){
-        CreateAVLTree pm = new CreateAVLTree(AVLPointMatch,3,currentFilePath);
-        CreateAVLTree ag = new CreateAVLTree(AVLAssistsGame,4,currentFilePath);
-        CreateAVLTree rg = new CreateAVLTree(AVLReboundsGame,5,currentFilePath);
-        CreateAVLTree sg = new CreateAVLTree(AVLSteelGame,6,currentFilePath);
+    private void createTrees(){
+
+        CreateTrees pm = new CreateTrees(AVLPointMatch,3,currentFilePath);
+        CreateTrees ag = new CreateTrees(AVLAssistsGame,4,currentFilePath);
+        CreateTrees rg = new CreateTrees(AVLReboundsGame,5,currentFilePath);
+        CreateTrees sg = new CreateTrees(AVLSteelGame,6,currentFilePath);
+        CreateTrees bg = new CreateTrees(BSTBlockGame,7,currentFilePath);
         pm.start();
         ag.start();
         rg.start();
         sg.start();
     }//End createAVLTrees
 
+    private int countLines() throws IOException{
+        int c = 0;
+        try{
+            BufferedReader bw = new BufferedReader(new FileReader(currentFilePath));
+            while(bw.readLine() != null) c++;
+        }catch(IOException e){ e.printStackTrace();}
+        return c;
+    }//End coutnLines
 }//End FIBA
