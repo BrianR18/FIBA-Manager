@@ -34,7 +34,6 @@ public class FIBAGUI {
     @FXML
     public void init(ActionEvent event) throws IOException, InterruptedException {
         Progress pr = new Progress(this, jProgressbar1);
-
         pr.start();
 
     }
