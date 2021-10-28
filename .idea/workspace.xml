@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIBA-Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FIBA-Manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/AddPlayer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/AddPlayer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/Configuration.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/Configuration.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/LoadingImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/LoadingImage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/MainMenu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/MainMenu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/PlayerEdit.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/PlayerEdit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/PlayerInformation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/PlayerInformation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Images Interface/SearchPlayer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/ImagesInterface/SearchPlayer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/AddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/AddPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Config.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Config.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Edit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Load.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Load.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Serch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Serch.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/AddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AddPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Config.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Config.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Edit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Load.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Load.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Serch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Serch.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateAVLTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateAVLTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/prueba.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/prueba.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thread/CreateAVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thread/CreateTrees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/prueba.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/prueba.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +37,14 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f1cf87b0-1bca-46d5-a7b8-608b9565871d" />
+        <option name="url" value="https://github.com/BrianR18/FIBA-Manager.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="1zbPUElckMkxhwmYgzly2EZW8vp" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,7 +65,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="io.unthrottled.amii.config.ui.PluginSettingsUI" />
   </component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="false" />
@@ -98,15 +89,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Collections.MainTest" />
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.Main2" />
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Collections.*" />
+          <option name="PATTERN" value="ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,6 +171,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main2" />
         <item itemvalue="JUnit.BSTTest (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
