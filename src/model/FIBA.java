@@ -46,36 +46,40 @@ public class FIBA {
         createTrees();
     }//End importDataFile
 
-    public ArrayList<Player> getPlayersByBlocksPerGame(int key) throws IOException{
+    public ArrayList<Player> getPlayers(int key,String searchCriteria) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader(currentFilePath));
-        List<Integer> founds = new ArrayList<>();
-        Collections.sort(founds);
-        int listIndex = 0;
-        String playerData = br.readLine();
-        for(int i = 1; playerData != null; i++){
-            if(i == founds.get(listIndex)){
-                
-            }//End if
-            playerData = br.readLine();
-        }//end for
-        return null;
+        List<Integer> founds = getTreeToSearch(searchCriteria).search(key);
+        ArrayList<Player> playersFound = new ArrayList<>();
+        if(!founds.isEmpty()){
+            Collections.sort(founds);
+            int listIndex = 0;
+            String playerData = br.readLine();
+            for(int i = 1; listIndex < founds.size() && playerData != null; i++){
+                if(i == founds.get(listIndex)){
+                    String[] cP = playerData.split(separator);
+                    Player player = new Player(cP[0],Integer.parseInt(cP[1]),cP[2],Integer.parseInt(cP[3]),
+                    Integer.parseInt(cP[4]),Integer.parseInt(cP[5]),Integer.parseInt(cP[6]),Integer.parseInt(cP[7]) );
+                    playersFound.add(player);
+                    listIndex++;
+                }//End if
+                playerData = br.readLine();
+            }//end for
+        }//End if
+        return playersFound;
     }//End getPlayersByBlocksPerGame
 
-    public ArrayList<String> getPlayersByAssistsPerGame(int key){
-        return null;
-    }//End getPlayersByAssistsPerGame
-
-    public ArrayList<String> getPlayersByPointsPerMatch(int key){
-        return null;
-    }//End getPlayersByPointsPerMatch
-
-    public ArrayList<String> getPlayersByReboundsPerGame(int key){
-        return null;
-    }//End getPlayersByReboundsPerGame
-
-    public ArrayList<String> getPlayersBySteelsPerGame(int key){
-        return null;
-    }//End getPlayersBySteelsPerGame
+    private BST<Integer,Integer> getTreeToSearch(String searchCriteria){
+        BST<Integer,Integer> toSearch = null;
+        SearchCriteria c = SearchCriteria.valueOf(searchCriteria);
+        switch (c){
+            case BLOCKS_PER_GAME: toSearch = BSTBlockGame; break;
+            case STEELS_PER_GAME: toSearch = AVLSteelGame; break;
+            case POINTS_PER_MATCH: toSearch = AVLPointMatch; break;
+            case REBOUNDS_PER_GAME: toSearch = AVLReboundsGame; break;
+            case ASSISTS_PER_GAME: toSearch = AVLAssistsGame; break;
+        }//End switch
+        return toSearch;
+    }//End getTreeSearchCriteria
 
     private void createTrees(){
         CreateTrees pm = new CreateTrees(AVLPointMatch,3,currentFilePath);
