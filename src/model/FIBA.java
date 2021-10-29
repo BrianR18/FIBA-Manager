@@ -1,9 +1,10 @@
 package model;
-import Collections.BBT;
-import Collections.BST;
+import Collections.*;
 import Thread.CreateTrees;
 import java.io.*;
+import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class FIBA {
     private final String separator = ";";
@@ -33,10 +34,10 @@ public class FIBA {
         int k = countLines() + 1;
         bw.write("\n"+name+separator+age+separator+team+separator+pointMatch+separator+assistsGame
                 +separator+reboundsGame+separator+steelGame+separator+blockGame);
-        AVLAssistsGame.insert(assistsGame,k);
-        AVLPointMatch.insert(pointMatch,k);
-        AVLReboundsGame.insert(reboundsGame,k);
-        AVLSteelGame.insert(steelGame,k);
+        AVLAssistsGame.insert(k,assistsGame);
+        AVLPointMatch.insert(k,pointMatch);
+        AVLReboundsGame.insert(k,reboundsGame);
+        AVLSteelGame.insert(k,steelGame);
         bw.close();
     }//End addPlayer
 
@@ -45,8 +46,18 @@ public class FIBA {
         createTrees();
     }//End importDataFile
 
-    public ArrayList<Player> getPlayersByBlocksPerGame(int key){
-
+    public ArrayList<Player> getPlayersByBlocksPerGame(int key) throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader(currentFilePath));
+        List<Integer> founds = new ArrayList<>();
+        Collections.sort(founds);
+        int listIndex = 0;
+        String playerData = br.readLine();
+        for(int i = 1; playerData != null; i++){
+            if(i == founds.get(listIndex)){
+                
+            }//End if
+            playerData = br.readLine();
+        }//end for
         return null;
     }//End getPlayersByBlocksPerGame
 
@@ -67,7 +78,6 @@ public class FIBA {
     }//End getPlayersBySteelsPerGame
 
     private void createTrees(){
-
         CreateTrees pm = new CreateTrees(AVLPointMatch,3,currentFilePath);
         CreateTrees ag = new CreateTrees(AVLAssistsGame,4,currentFilePath);
         CreateTrees rg = new CreateTrees(AVLReboundsGame,5,currentFilePath);
@@ -77,6 +87,7 @@ public class FIBA {
         ag.start();
         rg.start();
         sg.start();
+        bg.start();
     }//End createAVLTrees
 
     private int countLines() throws IOException{

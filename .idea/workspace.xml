@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateAVLTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateAVLTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/prueba.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/prueba.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thread/CreateAVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thread/CreateTrees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thread/CreateTrees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thread/CreateTrees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/prueba.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/prueba.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

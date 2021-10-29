@@ -32,7 +32,7 @@ public class CreateTrees extends Thread{
         String currentLine = br.readLine();
         for(int i = 1; currentLine != null; i++){
             String[] playerData = currentLine.split(";");
-            tree.insert(Integer.parseInt(playerData[index]),i);
+            tree.insert(i,Integer.parseInt(playerData[index]));
             currentLine = br.readLine();
         }//End for
         br.close();
