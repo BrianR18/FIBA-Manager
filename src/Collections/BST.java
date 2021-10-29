@@ -1,5 +1,8 @@
 package Collections;
 
+import javax.print.attribute.HashDocAttributeSet;
+import java.util.ArrayList;
+
 public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     private BSTNode<T,S> root;
 
@@ -16,14 +19,14 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     }
 
     private void insert(BSTNode<T,S> actualNode, BSTNode<T,S> nodeToAdd) {
-        if ((actualNode.getKey().compareTo(nodeToAdd.getKey()))<0) {
+        if ((actualNode.getKey().compareTo(nodeToAdd.getKey()))<=0) {
             if (actualNode.getRight() == null) {
                 actualNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
             } else {
                 insert(actualNode.getRight(), nodeToAdd);
             }
-        } else {
+        } else if ((actualNode.getKey().compareTo(nodeToAdd.getKey()))>=0) {
             if (actualNode.getLeft() == null) {
                 actualNode.setLeft(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
@@ -35,25 +38,62 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
 
     @Override
-    public BSTNode<T,S> search(S key) {
+    public ArrayList<T> search(S key) {
+        ArrayList<T> valueFound = new ArrayList<>();
+        if(isLeaf(root)) {
+            if (root.getKey() == key) {
+                valueFound.add(root.getValue());
+                return valueFound;
+            } else {
+                return null;
+            }
+        }else{
+            return search(root, key, valueFound);
+        }
+    }
+
+    private ArrayList<T> search(BSTNode<T,S> actual, S key, ArrayList<T> valueFound) {
+            if (actual.getKey() == key && isLeaf(actual)) {
+                valueFound.add(actual.getValue());
+                return valueFound;
+            }
+            if(actual.getKey()==key) {
+                if(actual.getRight()!=null) {
+                    valueFound.add(actual.getValue());
+                     search(actual.getRight(), key, valueFound);
+                }else {
+                    valueFound.add(actual.getValue());
+                    search(actual.getLeft(), key, valueFound);
+                }
+            }else{
+                if(actual.getRight()!=null) {
+                    search(actual.getRight(), key, valueFound);
+                }else {
+                    search(actual.getLeft(), key, valueFound);
+                }
+            }
+        return valueFound;
+    }
+
+    @Override
+    public BSTNode<T,S> searchOneValue(S key) {
         if (root == null || root.getKey() == key) {
             return root;
         } else
-            return search(root, key);
+            return searchOneValue(root, key);
     }
 
-    private BSTNode<T,S> search(BSTNode<T,S> actual, S key) {
+    private BSTNode<T,S> searchOneValue(BSTNode<T,S> actual, S key) {
         if (actual == null || actual.getKey() == key) {
             return actual;
         } else {
             if ((actual.getKey().compareTo(key))>0) {
-                return search(actual.getLeft(), key);
+                return searchOneValue(actual.getLeft(), key);
             } else {
-                return search(actual.getRight(), key);
+                return searchOneValue(actual.getRight(), key);
             }
         }
     }
-
 
 
 
@@ -136,7 +176,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public BSTNode<T,S> getSuccessor(BSTNode<T,S> value) {
-        if(search(value.getKey())!=null) {
+        if(searchOneValue(value.getKey())!=null) {
             if (value.getRight() != null) {
                 return getMinimum(value.getRight());
             } else {
@@ -152,7 +192,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public BSTNode<T,S> getMinimum(BSTNode<T,S> value) {
-        if(search(value.getKey())!=null) {
+        if(searchOneValue(value.getKey())!=null) {
             while (value.getLeft() != null) {
                 value = value.getLeft();
             }
@@ -162,7 +202,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public BSTNode<T,S> getMaximum(BSTNode<T,S> value){
-        if(search(value.getKey())!=null) {
+        if(searchOneValue(value.getKey())!=null) {
             while (value.getRight() != null) {
                 value = value.getRight();
             }
