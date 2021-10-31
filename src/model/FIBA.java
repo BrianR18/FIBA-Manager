@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class FIBA {
-    private final String DEFAULT_FOLDER = "\\FIBA-Manager\\data\\players_data.csv";
+    private final String DEFAULT_FOLDER = "data\\players_data.csv";
     private final String separator = ";";
     private BST<Integer,Integer> BSTBlockGame;//bg
     private BBT<Integer,Integer> AVLAssistsGame;//ag
