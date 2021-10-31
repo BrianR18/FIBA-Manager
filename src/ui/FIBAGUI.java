@@ -159,12 +159,14 @@ public class FIBAGUI {
 		 	if(!searchValue.getText().isEmpty() && searchCriteria.getValue() != null){
 				 try {
 					 int key = Integer.parseInt(searchValue.getText());
-					 ArrayList<Player> player = FIBA.searchPlayers(key,searchCriteria.getValue());
+					 ArrayList<Player> p = FIBA.searchPlayers(key,searchCriteria.getValue());
+					 ObservableList<Player> player = FXCollections.observableList(p);
+					 playerFound.setItems(player);
 				 }catch(NumberFormatException  e){
 					 launchAlert("Valor incorrecto","El valor de busquedad debe ser un entero");
 				 }catch (IOException e){
 					 launchAlert("Error inesperado","Ha ocurrido un error inesperado");
-				 }
+				 }//End try..catch
 			 }else{
 				 launchAlert("Valores incorrectos","Debes de llenar todos los campos");
 			}//end else
