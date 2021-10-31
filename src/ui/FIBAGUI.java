@@ -168,6 +168,7 @@ public class FIBAGUI {
 		public void unFocusButton(){
 			searchPlayerButton.setOpacity(1);
 		}//End focusButton
+//Tremendo commit inutil
 		@FXML
 		public void searchPlayer(){
 		 	if(!searchValue.getText().isEmpty() && searchCriteria.getValue() != null){
