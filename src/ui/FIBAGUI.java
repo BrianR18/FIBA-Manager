@@ -334,7 +334,12 @@ public class FIBAGUI {
 
 
 
+<<<<<<< HEAD
 	    /*
+=======
+
+	    
+>>>>>>> master
 	    @FXML
 	        public void initializeTabbleViewAccessories() {
 	        	ObservableList<Accessories> observableList;
