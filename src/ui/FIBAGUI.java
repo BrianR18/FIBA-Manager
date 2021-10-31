@@ -286,6 +286,7 @@ public class FIBAGUI {
 
 
 
+
 	    
 	    @FXML
 	        public void initializeTabbleViewAccessories() {
