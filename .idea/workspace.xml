@@ -2,18 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ui/prueba2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateAVLTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateTrees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateTrees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/AddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/AddPlayer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Config.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Config.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Edit.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Serch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Serch.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SearchCriteria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/AddPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AddPlayer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Config.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Config.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Edit.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Serch.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Serch.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,8 +185,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BSTTest (1)" />
         <item itemvalue="Application.Main2" />
+        <item itemvalue="JUnit.BSTTest (1)" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
         <item itemvalue="Application.MainTest" />
       </list>

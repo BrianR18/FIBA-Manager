@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class FIBA {
+    private final String DEFAULT_FOLDER = "\\FIBA-Manager\\data\\players_data.csv";
     private final String separator = ";";
     private BST<Integer,Integer> BSTBlockGame;//bg
     private BBT<Integer,Integer> AVLAssistsGame;//ag
@@ -30,15 +31,22 @@ public class FIBA {
 
     public void addPlayer(String name, int age,String team, int pointMatch,
                           int assistsGame, int reboundsGame, int steelGame, int blockGame) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(currentFilePath,true));
-        int k = countLines() + 1;
-        bw.write("\n"+name+separator+age+separator+team+separator+pointMatch+separator+assistsGame
-                +separator+reboundsGame+separator+steelGame+separator+blockGame);
-        AVLAssistsGame.insert(k,assistsGame);
-        AVLPointMatch.insert(k,pointMatch);
-        AVLReboundsGame.insert(k,reboundsGame);
-        AVLSteelGame.insert(k,steelGame);
-        bw.close();
+        boolean created = true;
+        if(currentFilePath == null){
+            currentFilePath = new File(DEFAULT_FOLDER);
+            created = currentFilePath.createNewFile();
+        }//End if
+        if(created){
+            BufferedWriter bw = new BufferedWriter(new FileWriter(currentFilePath,true));
+            int k = countLines() + 1;
+            bw.write("\n"+name+separator+age+separator+team+separator+pointMatch+separator+assistsGame
+                    +separator+reboundsGame+separator+steelGame+separator+blockGame);
+            AVLAssistsGame.insert(k,assistsGame);
+            AVLPointMatch.insert(k,pointMatch);
+            AVLReboundsGame.insert(k,reboundsGame);
+            AVLSteelGame.insert(k,steelGame);
+            bw.close();
+        }//end if
     }//End addPlayer
 
     public void importDataFile(File data){
@@ -46,24 +54,27 @@ public class FIBA {
         createTrees();
     }//End importDataFile
 
-    public ArrayList<Player> getPlayers(int key,String searchCriteria) throws IOException{
-        BufferedReader br = new BufferedReader(new FileReader(currentFilePath));
-        List<Integer> founds = getTreeToSearch(searchCriteria).search(key);
-        ArrayList<Player> playersFound = new ArrayList<>();
-        if(!founds.isEmpty()){
-            Collections.sort(founds);
-            int listIndex = 0;
-            String playerData = br.readLine();
-            for(int i = 1; listIndex < founds.size() && playerData != null; i++){
-                if(i == founds.get(listIndex)){
-                    String[] cP = playerData.split(separator);
-                    Player player = new Player(cP[0],Integer.parseInt(cP[1]),cP[2],Integer.parseInt(cP[3]),
-                    Integer.parseInt(cP[4]),Integer.parseInt(cP[5]),Integer.parseInt(cP[6]),Integer.parseInt(cP[7]) );
-                    playersFound.add(player);
-                    listIndex++;
-                }//End if
-                playerData = br.readLine();
-            }//end for
+    public ArrayList<Player> searchPlayers(int key,String searchCriteria) throws IOException{
+        ArrayList<Player> playersFound = null;
+        if(currentFilePath != null){
+            BufferedReader br = new BufferedReader(new FileReader(currentFilePath));
+            List<Integer> founds = getTreeToSearch(searchCriteria).search(key);
+            playersFound = new ArrayList<>();
+            if(!founds.isEmpty()){
+                Collections.sort(founds);
+                int listIndex = 0;
+                String playerData = br.readLine();
+                for(int i = 1; listIndex < founds.size() && playerData != null; i++){
+                    if(i == founds.get(listIndex)){
+                        String[] cP = playerData.split(separator);
+                        Player player = new Player(cP[0],Integer.parseInt(cP[1]),cP[2],Integer.parseInt(cP[3]),
+                        Integer.parseInt(cP[4]),Integer.parseInt(cP[5]),Integer.parseInt(cP[6]),Integer.parseInt(cP[7]));
+                        playersFound.add(player);
+                        listIndex++;
+                    }//End if
+                    playerData = br.readLine();
+                }//end for
+            }//End if
         }//End if
         return playersFound;
     }//End getPlayersByBlocksPerGame
@@ -72,11 +83,11 @@ public class FIBA {
         BST<Integer,Integer> toSearch = null;
         SearchCriteria c = SearchCriteria.valueOf(searchCriteria);
         switch (c){
-            case BLOCKS_PER_GAME: toSearch = BSTBlockGame; break;
-            case STEELS_PER_GAME: toSearch = AVLSteelGame; break;
-            case POINTS_PER_MATCH: toSearch = AVLPointMatch; break;
-            case REBOUNDS_PER_GAME: toSearch = AVLReboundsGame; break;
-            case ASSISTS_PER_GAME: toSearch = AVLAssistsGame; break;
+            case BLOQUEOS: toSearch = BSTBlockGame; break;
+            case ROBOS: toSearch = AVLSteelGame; break;
+            case PUNTOS: toSearch = AVLPointMatch; break;
+            case REBOTES: toSearch = AVLReboundsGame; break;
+            case ASISTENCIAS: toSearch = AVLAssistsGame; break;
         }//End switch
         return toSearch;
     }//End getTreeSearchCriteria
@@ -102,4 +113,7 @@ public class FIBA {
         }catch(IOException e){ e.printStackTrace();}
         return c;
     }//End coutnLines
+
+
+
 }//End FIBA
