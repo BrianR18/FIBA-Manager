@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/SearchCriteria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/prueba2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateAVLTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateTrees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Thread/CreateTrees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SearchCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SearchCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +78,7 @@
       <recent name="C:\Users\Janna\Desktop\CUARTO SEMESTRE\Estructuras de datos\Programas\TI2\FIBA-Manager\src\Collections\BST" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BSTTest (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.Main" />
       <module name="FIBA-Manager" />
@@ -165,12 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main2" />
         <item itemvalue="JUnit.BSTTest (1)" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BSTTest.insertTest" />
         <item itemvalue="Application.MainTest" />
-        <item itemvalue="JUnit.BSTTest" />
       </list>
     </recent_temporary>
   </component>

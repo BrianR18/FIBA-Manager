@@ -1,25 +1,27 @@
 package ui;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import Thread.Progress;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.FIBA;
-
-
+import model.Player;
 
 public class FIBAGUI {
 	
@@ -29,7 +31,11 @@ public class FIBAGUI {
 	@FXML
     private BorderPane pane;
 	private FIBA FIBA;
-	
+
+	@FXML private TextField searchValue;
+	@FXML private ChoiceBox<String> searchCriteria;
+	@FXML private ListView<Player> playerFound;
+
 	 public FIBAGUI(FIBA controller) {
 		 FIBA = controller;
 	 }
@@ -57,7 +63,17 @@ public class FIBAGUI {
 			
 		}
 	 
-	 
+
+	 private void loadSearchCriteria(){
+		 List<String> c = new ArrayList<>();
+		 c.add("BLOQUEOS");
+		 c.add("PUNTOS");
+		 c.add("ASISTENCIAS");
+		 c.add("ROBOS");
+		 c.add("REBOTES");
+		 ObservableList<String> criterian  = FXCollections.observableList(c);
+		 searchCriteria.setItems(criterian);
+	 }//End loadSearchCriteria
 	 
 	 
 	@FXML
@@ -114,11 +130,11 @@ public class FIBAGUI {
 	@FXML
 	     void sherchPlayer(ActionEvent event) throws IOException {
 	    	
-	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Serch.fxml"));
+	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Search.fxml"));
 	        fxmlLoader.setController(this);
 	        Parent form = fxmlLoader.load();
 	        pane.setCenter(form);
-
+			loadSearchCriteria();
 	    }
 	    
 	    @FXML
@@ -131,7 +147,30 @@ public class FIBAGUI {
 
 	    }
 
+		@FXML
+		public void searchPlayer(){
+		 	if(!searchValue.getText().isEmpty() && searchCriteria.getValue() != null){
+				 try {
+					 int key = Integer.parseInt(searchValue.getText());
+					 ArrayList<Player> player = FIBA.searchPlayers(key,searchCriteria.getValue());
+				 }catch(NumberFormatException  e){
+					 launchAlert("Valor incorrecto","El valor de busquedad debe ser un entero");
+				 }catch (IOException e){
+					 launchAlert("Error inesperado","Ha ocurrido un error inesperado");
+				 }
+			 }else{
+				 launchAlert("Valores incorrectos","Debes de llenar todos los campos");
+			}//end else
+		}//End searchPlayer
 
+		@FXML
+		public void launchAlert(String title,String msg) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle(title);
+			alert.setHeaderText(null);
+			alert.setContentText(msg);
+			alert.showAndWait();
+		}
 		/*@FXML
 		void behind(ActionEvent event)throws Exception{
 
