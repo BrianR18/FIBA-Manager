@@ -8,11 +8,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1201.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="593.0" fitWidth="1020.0" layoutX="12.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="694.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../FIBA-Manager/Images/Images%20Interface/PlayerEdit.png" />
+            <Image url="@image/PlayerEdit.png" />
          </image>
       </ImageView>
       <Button layoutX="29.0" layoutY="350.0" mnemonicParsing="false" onAction="#behind" prefHeight="36.0" prefWidth="40.0" style="-fx-background-color: transparent;" />

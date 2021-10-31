@@ -12,11 +12,11 @@
             <Image url="@image/Configuration.png" />
          </image>
       </ImageView>
-      <Button layoutX="654.0" layoutY="20.0" mnemonicParsing="false" onAction="#behind" prefHeight="40.0" prefWidth="38.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="1098.0" layoutY="14.0" mnemonicParsing="false" onAction="#behind" prefHeight="62.0" prefWidth="62.0" style="-fx-background-color: transparent;" />
       <Button layoutX="251.0" layoutY="430.0" mnemonicParsing="false" onAction="#Imp" text="Importar base de datos" />
       <Button layoutX="509.0" layoutY="430.0" mnemonicParsing="false" onAction="#Exp" prefHeight="31.0" prefWidth="215.0" text="Exportar base de datos" />
-      <Button layoutX="141.0" layoutY="14.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="160.0" prefWidth="220.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="476.0" layoutY="4.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="160.0" prefWidth="226.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="128.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="160.0" prefWidth="220.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="478.0" layoutY="14.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="160.0" prefWidth="226.0" style="-fx-background-color: transparent;" />
       <Button layoutX="251.0" layoutY="514.0" mnemonicParsing="false" onAction="#credits" prefHeight="31.0" prefWidth="175.0" text="Creditos" />
       <Button layoutX="509.0" layoutY="514.0" mnemonicParsing="false" onAction="#infoApli" text="Imformacion de la aplicacion " />
    </children>

@@ -52,6 +52,8 @@ public class FIBAGUI {
 			fxmlLoader.setController(this);
 			Parent login1 = fxmlLoader.load();
 			pane.setCenter(login1);
+
+
 			//pane.setLayoutX(180);
 			//pane.setLayoutY(180);
 			
@@ -67,6 +69,9 @@ public class FIBAGUI {
 	        fxmlLoader.setController(this);
 	        Parent form = fxmlLoader.load();
 	        pane.setCenter(form);
+			Stage st = (Stage) form.getScene().getWindow();
+			st.setWidth(1200);
+			st.setHeight(690);
 
 	    }
 
@@ -118,6 +123,9 @@ public class FIBAGUI {
 	        fxmlLoader.setController(this);
 	        Parent form = fxmlLoader.load();
 	        pane.setCenter(form);
+		Stage st = (Stage) form.getScene().getWindow();
+		st.setWidth(1200);
+		st.setHeight(690);
 
 	    }
 	    
