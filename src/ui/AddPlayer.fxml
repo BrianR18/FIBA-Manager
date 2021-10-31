@@ -22,8 +22,8 @@
       <TextField fx:id="addEsta3" alignment="CENTER" layoutX="750.0" layoutY="364.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 3" />
       <TextField fx:id="addEsta4" alignment="CENTER" layoutX="750.0" layoutY="413.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 4" />
       <TextField fx:id="addEsta5" alignment="CENTER" layoutX="750.0" layoutY="459.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 5" />
-      <Button layoutX="487.0" layoutY="15.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="160.0" prefWidth="216.0" style="-fx-background-color: transaparent;" />
-      <Button layoutX="834.0" layoutY="15.0" mnemonicParsing="false" onAction="#confi" prefHeight="160.0" prefWidth="216.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="152.0" layoutY="257.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="374.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="searchPlayerSceneButton" layoutX="487.0" layoutY="15.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="160.0" prefWidth="216.0" style="-fx-background-color: transaparent;" />
+      <Button fx:id="configurationSceneButton" layoutX="834.0" layoutY="15.0" mnemonicParsing="false" onAction="#confi" prefHeight="160.0" prefWidth="216.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="addPlayerButton" layoutX="152.0" layoutY="257.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="374.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

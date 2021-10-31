@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -32,6 +33,12 @@ public class FIBAGUI {
     private BorderPane pane;
 	private FIBA FIBA;
 
+	@FXML private Button addPlayerButton;
+	@FXML private Button addPlayerSceneButton;
+	@FXML private ImageView searchPlayerButton;
+	@FXML private Button searchPlayerSceneButton;
+	@FXML private Button configurationButton;
+	@FXML private Button configurationSceneButton;
 	@FXML private TextField searchValue;
 	@FXML private ChoiceBox<String> searchCriteria;
 	@FXML private ListView<Player> playerFound;
@@ -145,7 +152,7 @@ public class FIBAGUI {
 	 }//End sherchPlayer
 	    
 	    @FXML
-	    void behind(ActionEvent event) throws Exception {
+	    public void behind(ActionEvent event) throws Exception {
 	    	
 	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Main.fxml"));
 			fxmlLoader.setController(this);
@@ -153,7 +160,14 @@ public class FIBAGUI {
 			pane.setCenter(login1);
 
 	    }
-
+		@FXML
+		public void focusButton(){
+			searchPlayerButton.setOpacity(0.68);
+		}//End focusButton
+		@FXML
+		public void unFocusButton(){
+			searchPlayerButton.setOpacity(1);
+		}//End focusButton
 		@FXML
 		public void searchPlayer(){
 		 	if(!searchValue.getText().isEmpty() && searchCriteria.getValue() != null){

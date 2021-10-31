@@ -20,8 +20,8 @@
          </image>
       </ImageView>
       <Button layoutX="985.0" layoutY="31.0" mnemonicParsing="false" onAction="#behind" prefHeight="45.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="740.0" layoutY="14.0" mnemonicParsing="false" onAction="#confi" prefHeight="140.0" prefWidth="197.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="122.0" layoutY="14.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="140.0" prefWidth="197.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="configurationSceneButton" layoutX="740.0" layoutY="14.0" mnemonicParsing="false" onAction="#confi" prefHeight="140.0" prefWidth="197.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="addPlayerSceneButton" layoutX="122.0" layoutY="14.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="140.0" prefWidth="197.0" style="-fx-background-color: transparent;" />
       <TextField fx:id="searchValue" layoutX="171.0" layoutY="300.0" prefHeight="25.0" prefWidth="124.0" promptText="Valor de busquedad" />
       <ChoiceBox fx:id="searchCriteria" layoutX="167.0" layoutY="372.0" prefHeight="25.0" prefWidth="133.0" />
       <Label layoutX="165.0" layoutY="346.0" text="Criterio de busquedad" textFill="WHITE">
@@ -29,7 +29,6 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="203.0" layoutY="439.0" mnemonicParsing="false" onAction="#searchPlayer" prefHeight="25.0" prefWidth="61.0" text="Buscar" />
       <ListView fx:id="playerFound" layoutX="597.0" layoutY="268.0" prefHeight="284.0" prefWidth="272.0">
          <contextMenu>
             <ContextMenu>
@@ -41,5 +40,10 @@
             </ContextMenu>
          </contextMenu>
       </ListView>
+      <ImageView fx:id="searchPlayerButton" fitHeight="38.0" fitWidth="95.0" layoutX="191.0" layoutY="425.0" onMouseClicked="#searchPlayer" onMouseEntered="#focusButton" onMouseExited="#unFocusButton" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/SearchButton.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
