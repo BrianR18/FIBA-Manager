@@ -21,6 +21,19 @@ public class Player {
         this.blockGame = blockGame;
     }//End player constructor
 
+    public Player(){
+
+        this.name = "";
+        this.age = 0;
+        this.team ="";
+        this.pointMatch = 0;
+        this.reboundsGame = 0;
+        this.assistsGame = 0;
+        this.stealGame = 0;
+        this.blockGame = 0;
+
+    }
+
     public String getName() {
         return name;
     }
