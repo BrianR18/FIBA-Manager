@@ -39,11 +39,5 @@ public class Main extends Application{
 			primaryStage.setTitle("Federacion Internacional de Baloncesto");
 			primaryStage.setResizable(false);
 			primaryStage.show();
-			
-			
-
 	    }
-
-	
-
 }
