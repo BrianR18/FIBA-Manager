@@ -34,11 +34,11 @@ public class FIBAGUI {
 	private FIBA FIBA;
 
 	@FXML private Button addPlayerButton;
-	@FXML private Button addPlayerSceneButton;
+	@FXML private ImageView addPlayerSceneButton;
 	@FXML private ImageView searchPlayerButton;
 	@FXML private Button searchPlayerSceneButton;
 	@FXML private Button configurationButton;
-	@FXML private Button configurationSceneButton;
+	@FXML private ImageView configurationSceneButton;
 	@FXML private TextField searchValue;
 	@FXML private ChoiceBox<String> searchCriteria;
 	@FXML private ListView<Player> playerFound;
@@ -84,22 +84,19 @@ public class FIBAGUI {
 		 searchCriteria.setItems(criterian);
 	 }//End loadSearchCriteria
 	 
-	 
+
 	@FXML
-	    void addPlayer(ActionEvent event) throws Exception{
-		 
-		 	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddPlayer.fxml"));
-	        fxmlLoader.setController(this);
-	        Parent form = fxmlLoader.load();
-	        pane.setCenter(form);
-			Stage st = (Stage) form.getScene().getWindow();
-			st.setWidth(1200);
-			st.setHeight(690);
-
-	    }
-
+	void addPLayer() throws IOException{
+		 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("\\src\\ui\\AddPlayer.fxml"));
+		 fxmlLoader.setController(this);
+		 Parent addPlayer = fxmlLoader.load();
+		 pane.setCenter(addPlayer);
+		 Stage st = (Stage) addPlayer.getScene().getWindow();
+		st.setWidth(1200);
+		st.setHeight(690);
+	}
 	    @FXML
-	    void confi(ActionEvent event) throws IOException {
+	    void confi() throws IOException {
 
 	    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Config.fxml"));
 	        fxmlLoader.setController(this);
@@ -162,21 +159,28 @@ public class FIBAGUI {
 	    }
 		@FXML
 		public void focusButton(){
-			searchPlayerButton.setOpacity(0.68);
+			searchPlayerButton.setOpacity(1);
 		}//End focusButton
 		@FXML
 		public void unFocusButton(){
-			searchPlayerButton.setOpacity(1);
+			searchPlayerButton.setOpacity(0.68);
 		}//End focusButton
 
 		@FXML
 		public void focusAddPlayerSceneButton(){
-		 System.out.println("Entra");
-			addPlayerSceneButton.setOpacity(0.68);
+			addPlayerSceneButton.setOpacity(1);
 		}
 		@FXML
 		public void unFocusAddPlayerSceneButton(){
-			addPlayerSceneButton.setOpacity(0.68);
+			addPlayerSceneButton.setOpacity(0);
+		}
+		@FXML
+		public void focusSettingSceneButton(){
+		 	configurationSceneButton.setOpacity(1);
+		}
+		@FXML
+		public void unFocusSettingSceneButton(){
+			configurationSceneButton.setOpacity(0);
 		}
 //Tremendo commit inutil
 		@FXML
