@@ -18,7 +18,8 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
     }//End insert
 
     private void insert(BSTNode<T,S> currentNode, BSTNode<T,S> nodeToAdd) {
-        if ((currentNode.getKey().compareTo(nodeToAdd.getKey()))<0) {
+        int a = (currentNode.getKey().compareTo(nodeToAdd.getKey()));
+        if (a<0) {
             if (currentNode.getRight() == null) {
                 currentNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
@@ -30,6 +31,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             if (currentNode.getLeft() == null) {
                 currentNode.setLeft(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
+                rebalanced(currentNode.getParent());
             } else {
                 insert(currentNode.getLeft(), nodeToAdd);
             }
@@ -161,6 +163,8 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
                     rightRotate(subTreeRoot);
                 }//End else
             }//End case unbalanced on left node
-        }//End if subtree unbalanced
-    }//End rebalanced
+        }if(subTreeRoot != null){
+            rebalanced(subTreeRoot.getParent());
+        }//End if
+    }//End subTreeRoot
 }//End Balance binary tree
