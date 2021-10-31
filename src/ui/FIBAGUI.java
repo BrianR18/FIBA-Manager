@@ -83,6 +83,7 @@ public class FIBAGUI {
 		//pane.setLayoutY(180);
 
 	}
+	//A
 
 
 	private void loadSearchCriteria(){
