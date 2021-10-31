@@ -43,6 +43,17 @@ public class FIBAGUI {
 	@FXML private ChoiceBox<String> searchCriteria;
 	@FXML private ListView<Player> playerFound;
 
+	//Add Player Variables
+	@FXML private TextField addName;
+	@FXML private TextField AddYear;
+	@FXML private TextField AddEquipo;
+	@FXML private TextField addEsta1; //pointMatch
+	@FXML private TextField addEsta2; //assistGame
+	@FXML private TextField addEsta3; //reboundsGame
+	@FXML private TextField addEsta4; //steelGame
+	@FXML private TextField addEsta5; //blockGame
+	//~~~~~~~~~~~~~~~~~~~~~~
+
 	 public FIBAGUI(FIBA controller) {
 		 FIBA = controller;
 	 }
@@ -239,9 +250,7 @@ public class FIBAGUI {
 
 		}
 	    
-	    //________________________________________________
-	    
-	    //_______-Daniel
+	    //~~~~~~Alerts~~~~~~~
 	    @FXML
 	    public void youNeedToFillTextFields(ActionEvent event) {
 	        Alert alert = new Alert(AlertType.INFORMATION);
@@ -261,6 +270,16 @@ public class FIBAGUI {
 	        alert.showAndWait();
 	    }
 
+		@FXML
+		public void verifyIsNumeric(ActionEvent event) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Alert");
+			alert.setHeaderText(null);
+			alert.setContentText("Please verify the value is a numerical value");
+
+			alert.showAndWait();
+		}
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 	@FXML
@@ -273,24 +292,49 @@ public class FIBAGUI {
 
 	}
 	    
-	   /* public void addClotheShirt(ActionEvent event) throws IOException {
-	        if (!txtShirtFabricType.getText().equals("") && !txtShirtStyle.getText().equals("") && !txtShirtType.getText().equals("")) {
-	            int price = Integer.parseInt(txtClothesPrice.getText());
-	            int quantity = Integer.parseInt(txtClothesQuantity.getText());
-	            market.addClothingShirt(txtShirtFabricType.getText(), txtShirtType.getText(), txtClothesName.getText(), txtClothesCode.getText(), txtClothesMark.getText(), price, txtClothesSize.getText(), txtClothePathImage.getText(), txtClothesDescription.getText(), quantity, txtClothesColor.getText(), txtClothesGender.getText(), txtClothesType.getText());
-	            market.saveDataClothings();
-	            clothingCorrectlyCreated(event);
-	            emptyFieldsClothing();
-	            emptyFieldsShirt();
-	            loadAddClothes(event);
+	    public void addPlayerButton(ActionEvent event) throws IOException {
+	        if (!addName.getText().equals("") && !AddYear.getText().equals("") && !AddEquipo.getText().equals("") &&
+				!addEsta1.getText().equals("") && !addEsta2.getText().equals("") && !addEsta3.getText().equals("") &&
+				!addEsta4.getText().equals("") && !addEsta5.getText().equals("")) {
+				boolean isPointMatchNumeric = addEsta1.getText().matches("[+-]?\\d*(\\.\\d+)?");
+				boolean isAssistGameNumeric = addEsta2.getText().matches("[+-]?\\d*(\\.\\d+)?");
+				boolean isReboundGameNumeric = addEsta3.getText().matches("[+-]?\\d*(\\.\\d+)?");
+				boolean isSteelGameNumeric = addEsta4.getText().matches("[+-]?\\d*(\\.\\d+)?");
+				boolean isBlockGameNumeric = addEsta5.getText().matches("[+-]?\\d*(\\.\\d+)?");
+				boolean isYearNumeric = AddYear.getText().matches("[+-]?\\d*(\\.\\d+)?");
+				if(isPointMatchNumeric==true && isAssistGameNumeric ==true && isReboundGameNumeric==true &&
+					isSteelGameNumeric==true && isBlockGameNumeric==true && isYearNumeric==true) {
+					int pointMatch = Integer.parseInt(addEsta1.getText());
+					int assistGame = Integer.parseInt(addEsta2.getText());
+					int reboundsGame = Integer.parseInt(addEsta3.getText());
+					int steelGame = Integer.parseInt(addEsta4.getText());
+					int blockGame = Integer.parseInt(addEsta5.getText());
+					int year = Integer.parseInt(AddYear.getText());
+					FIBA.addPlayer(addName.getText(), year, AddEquipo.getText(), pointMatch, assistGame, reboundsGame, steelGame, blockGame);
+					userSuccesfullyRegistered(event);
+					emptyFieldAddPlayer();
+				}else{
+					verifyIsNumeric(event);
+				}
 	        } else {
 	            youNeedToFillTextFields(event);
 	        }
 	    }
 
+		public void emptyFieldAddPlayer(){
+			addName.setText("");
+			AddYear.setText("");
+			AddEquipo.setText("");
+			addEsta1.setText("");
+			addEsta5.setText("");
+			addEsta4.setText("");
+			addEsta3.setText("");
+			addEsta2.setText("");
+		}
 
 
-	    
+
+	    /*
 	    @FXML
 	        public void initializeTabbleViewAccessories() {
 	        	ObservableList<Accessories> observableList;
