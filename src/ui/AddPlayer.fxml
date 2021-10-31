@@ -17,13 +17,13 @@
       <TextField fx:id="addName" alignment="CENTER" layoutX="242.0" layoutY="398.0" prefHeight="31.0" prefWidth="207.0" promptText="Nombre " />
       <TextField fx:id="AddYear" alignment="CENTER" layoutX="242.0" layoutY="444.0" prefHeight="31.0" prefWidth="207.0" promptText="Edad" />
       <TextField fx:id="AddEquipo" alignment="CENTER" layoutX="242.0" layoutY="490.0" prefHeight="31.0" prefWidth="207.0" promptText="Equipo" />
-      <TextField fx:id="addEsta1" alignment="CENTER" layoutX="750.0" layoutY="276.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 1" />
-      <TextField fx:id="addEsta2" alignment="CENTER" layoutX="750.0" layoutY="318.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 2" />
-      <TextField fx:id="addEsta3" alignment="CENTER" layoutX="750.0" layoutY="364.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 3" />
-      <TextField fx:id="addEsta4" alignment="CENTER" layoutX="750.0" layoutY="413.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 4" />
-      <TextField fx:id="addEsta5" alignment="CENTER" layoutX="750.0" layoutY="459.0" prefHeight="31.0" prefWidth="168.0" promptText="Estadistica 5" />
+      <TextField fx:id="addEsta1" alignment="CENTER" layoutX="750.0" layoutY="276.0" prefHeight="31.0" prefWidth="168.0" promptText="Puntos por partido" />
+      <TextField fx:id="addEsta2" alignment="CENTER" layoutX="750.0" layoutY="318.0" prefHeight="31.0" prefWidth="168.0" promptText="Asistencias por partido" />
+      <TextField fx:id="addEsta3" alignment="CENTER" layoutX="750.0" layoutY="364.0" prefHeight="31.0" prefWidth="168.0" promptText="Rebotes por partido" />
+      <TextField fx:id="addEsta4" alignment="CENTER" layoutX="750.0" layoutY="413.0" prefHeight="31.0" prefWidth="168.0" promptText="Robos por partido" />
+      <TextField fx:id="addEsta5" alignment="CENTER" layoutX="750.0" layoutY="459.0" prefHeight="31.0" prefWidth="168.0" promptText="Bloqueos por partido" />
       <Button fx:id="searchPlayerSceneButton" layoutX="487.0" layoutY="15.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="160.0" prefWidth="216.0" style="-fx-background-color: transaparent;" />
       <Button fx:id="configurationSceneButton" layoutX="834.0" layoutY="15.0" mnemonicParsing="false" onAction="#confi" prefHeight="160.0" prefWidth="216.0" style="-fx-background-color: transparent;" />
-      <Button fx:id="addPlayerButton" layoutX="152.0" layoutY="257.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="374.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="addPlayerButton" layoutX="152.0" layoutY="257.0" mnemonicParsing="false" onAction="#addPlayerMethod" prefHeight="75.0" prefWidth="374.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

@@ -12,8 +12,8 @@
             <Image url="@image/MainMenu.png" />
          </image>
       </ImageView>
-      <Button layoutX="105.0" layoutY="158.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="368.0" prefWidth="288.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="446.0" layoutY="158.0" mnemonicParsing="false" onAction="#sherchPlayer" prefHeight="368.0" prefWidth="288.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="801.0" layoutY="158.0" mnemonicParsing="false" onAction="#confi" prefHeight="368.0" prefWidth="288.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="addPlayerPrincipalButton" layoutX="105.0" layoutY="158.0" mnemonicParsing="false" onAction="#addPlayer" opacity="0.0" prefHeight="368.0" prefWidth="288.0" style="-fx-background-image: ui\image\IconoAJG.png;" />
+      <Button fx:id="searchPlayerPrincipal" layoutX="450.0" layoutY="158.0" mnemonicParsing="false" onAction="#sherchPlayer" opacity="0.0" prefHeight="368.0" prefWidth="288.0" />
+      <Button fx:id="configPlayerPrincipal" layoutX="796.0" layoutY="158.0" mnemonicParsing="false" onAction="#confi" opacity="0.0" prefHeight="368.0" prefWidth="288.0" />
    </children>
 </AnchorPane>
