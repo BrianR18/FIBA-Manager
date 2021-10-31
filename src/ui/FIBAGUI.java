@@ -168,6 +168,16 @@ public class FIBAGUI {
 		public void unFocusButton(){
 			searchPlayerButton.setOpacity(1);
 		}//End focusButton
+
+		@FXML
+		public void focusAddPlayerSceneButton(){
+		 System.out.println("Entra");
+			addPlayerSceneButton.setOpacity(0.68);
+		}
+		@FXML
+		public void unFocusAddPlayerSceneButton(){
+			addPlayerSceneButton.setOpacity(0.68);
+		}
 //Tremendo commit inutil
 		@FXML
 		public void searchPlayer(){
