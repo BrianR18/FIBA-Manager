@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/FIBAGUIEmergent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BBTTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BBTTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BSTTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BSTTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collections/BBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BBT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Collections/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/BSTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/BSTTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thread/CreateTrees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thread/CreateTrees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/prueba.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/prueba2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUIEmergent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUIEmergent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
