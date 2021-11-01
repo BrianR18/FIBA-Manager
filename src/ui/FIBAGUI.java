@@ -71,8 +71,9 @@ public class FIBAGUI {
 
 	@FXML
 	public void init(ActionEvent event) throws IOException, InterruptedException {
+		jProgressbar1.setDisable(false);
 		Progress pr = new Progress(this, jProgressbar1);
-
+		jProgressbar1.setVisible(true);
 		pr.start();
 
 	}
@@ -235,8 +236,8 @@ public class FIBAGUI {
 	}//End listenerSelectPlayer
 	private void enableMenuItems(boolean e){
 		showInformation.setDisable(e);
-		changeInformation.setDisable(e);
-		deleInformation.setDisable(e);
+		changeInformation.setDisable(true);
+		deleInformation.setDisable(true);
 	}
 
 	@FXML
@@ -363,6 +364,12 @@ public class FIBAGUI {
 		}
 	}//End chooseImportFilePath
 
+
+	@FXML
+	public void playerToDelete(){
+		Player p = playerFound.getSelectionModel().getSelectedItem();
+		FIBA.deletePlayer(p);
+	}
 	   /* public void addClotheShirt(ActionEvent event) throws IOException {
 	        if (!txtShirtFabricType.getText().equals("") && !txtShirtStyle.getText().equals("") && !txtShirtType.getText().equals("")) {
 	            int price = Integer.parseInt(txtClothesPrice.getText());

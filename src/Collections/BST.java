@@ -9,10 +9,8 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public void insert(T node, S key) {
-        System.out.println("Se agregara "+key);
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (root == null) {
-            System.out.println("como raiz");
             root = nodeToAdd;
             root.setParent(null);
         } else {
@@ -25,7 +23,6 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
             if (actualNode.getRight() == null) {
                 actualNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
-                System.out.println("como hijo derecho de "+actualNode.getKey());
             } else {
                 insert(actualNode.getRight(), nodeToAdd);
             }
@@ -33,7 +30,6 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
             if (actualNode.getLeft() == null) {
                 actualNode.setLeft(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
-                System.out.println("como hijo izquierdo de "+actualNode.getKey());
             } else {
                 insert(actualNode.getLeft(), nodeToAdd);
             }
@@ -104,12 +100,16 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     public void delete(BSTNode<T,S> keyToDelete){
 
         //Case 1
-        if(keyToDelete.getLeft() == null && keyToDelete.getRight()==null){
+        if(isLeaf(keyToDelete)){
             BSTNode<T,S> parent = keyToDelete.getParent();
-            if(parent.getLeft()==keyToDelete){
-                parent.setLeft(null);
+            if(parent!=null) {
+                if (parent.getLeft() == keyToDelete) {
+                    parent.setLeft(null);
+                } else if (parent.getRight() == keyToDelete) {
+                    parent.setRight(null);
+                }
             }else{
-                parent.setRight(null);
+                setNull(keyToDelete);
             }
         }else{
             if(keyToDelete.getLeft()!=null && keyToDelete.getRight()!=null) {

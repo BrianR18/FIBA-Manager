@@ -33,7 +33,7 @@
               <items>
                 <MenuItem fx:id="showInformation" mnemonicParsing="false" onAction="#showPlayerInformation" text="Ver información" />
                   <MenuItem fx:id="changeInformation" mnemonicParsing="false" text="Modificar información" />
-                  <MenuItem fx:id="deleInformation" mnemonicParsing="false" text="Eliminar de busquedad" />
+                  <MenuItem fx:id="deleInformation" mnemonicParsing="false" onAction="#playerToDelete" text="Eliminar de busquedad" />
               </items>
             </ContextMenu>
          </contextMenu>
