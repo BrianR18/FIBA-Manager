@@ -44,6 +44,19 @@ public class BSTTest {
     }
 
     @Test
+    public void searchTest1(){
+        BST<String,Integer> bst = setupStage1();
+        bst.insert("a",45);
+        bst.insert("b",15);
+        bst.insert("d",15);
+        bst.insert("e",15);
+        bst.insert("f",15);
+        ArrayList<String> a = new ArrayList<>();
+        a.add("b");a.add("d");a.add("e");a.add("f");
+        assertEquals(a,bst.search(15));
+    }
+
+    @Test
     public void getSuccessorTest(){
 
         BST<String, Integer> bst = setupStage1();

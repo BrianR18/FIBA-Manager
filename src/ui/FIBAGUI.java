@@ -1,5 +1,6 @@
 package ui;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.FIBA;
 import model.Player;
@@ -54,6 +56,8 @@ public class FIBAGUI {
 	@FXML private TextField addEsta4; //steelGame
 	@FXML private TextField addEsta5; //blockGame
 	//~~~~~~~~~~~~~~~~~~~~~~
+
+	@FXML private TextField pathTxt;
 
 	public FIBAGUI(FIBA controller) {
 		FIBA = controller;
@@ -313,6 +317,18 @@ public class FIBAGUI {
 		addEsta2.setText("");
 	}
 
+	@FXML
+	public void chooseImportFilePath() {
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Selecciona ruta del archivo a importar");
+		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV", "*.csv"));
+		File f = fileChooser.showOpenDialog(null);
+		if(f != null) {
+			FIBA.importDataFile(f);
+		}else{
+			launchAlert("Advertencia","No ha seleccionado ningun archivo");
+		}
+	}//End chooseImportFilePath
 
 	   /* public void addClotheShirt(ActionEvent event) throws IOException {
 	        if (!txtShirtFabricType.getText().equals("") && !txtShirtStyle.getText().equals("") && !txtShirtType.getText().equals("")) {
