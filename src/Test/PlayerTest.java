@@ -37,6 +37,8 @@ public class PlayerTest {
     @Test
     public void setterTest(){
         Player pl = setupStage2();
+
+
         pl.setName("Sebastian");
         assertEquals("Sebastian", pl.getName());
 
