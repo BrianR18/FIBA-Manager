@@ -70,8 +70,9 @@ public class FIBAGUI {
 
 	@FXML
 	public void init(ActionEvent event) throws IOException, InterruptedException {
+		jProgressbar1.setDisable(false);
 		Progress pr = new Progress(this, jProgressbar1);
-
+		jProgressbar1.setVisible(true);
 		pr.start();
 
 	}
