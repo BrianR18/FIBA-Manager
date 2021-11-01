@@ -19,7 +19,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
 
     private void insert(BSTNode<T,S> currentNode, BSTNode<T,S> nodeToAdd) {
         int a = (currentNode.getKey().compareTo(nodeToAdd.getKey()));
-        if (a<0) {
+        if (a<=0) {
             if (currentNode.getRight() == null) {
                 currentNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
@@ -117,7 +117,8 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
         else{subTreeParent.setRight(subTreeRoot.getRight());}
         subTreeRoot.getRight().setParent(subTreeParent);
         subTreeRoot.setRight(subTreeRoot.getRight().getLeft());
-        subTreeRoot.getRight().setParent(subTreeRoot);
+        if(subTreeRoot.getRight() != null)
+            subTreeRoot.getRight().setParent(subTreeRoot);
         if(direction){
             subTreeParent.getLeft().setLeft(subTreeRoot);
             subTreeRoot.setParent(subTreeParent.getLeft());
@@ -133,7 +134,8 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
         else{subTreeParent.setRight(subTreeRoot.getLeft());}
         subTreeRoot.getLeft().setParent(subTreeParent);
         subTreeRoot.setLeft(subTreeRoot.getLeft().getRight());
-        subTreeRoot.getLeft().setParent(subTreeRoot);
+        if(subTreeRoot.getLeft() != null)
+            subTreeRoot.getLeft().setParent(subTreeRoot);
         if(direction){
             subTreeParent.getLeft().setRight(subTreeRoot);
             subTreeRoot.setParent(subTreeParent.getRight());

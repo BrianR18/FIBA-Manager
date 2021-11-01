@@ -35,18 +35,20 @@ public class FIBA {
         if(currentFilePath == null){
             currentFilePath = new File(DEFAULT_FOLDER);
             created = currentFilePath.createNewFile();
+            if(!created)
+                createTrees();
         }//End if
-        if(created){
-            BufferedWriter bw = new BufferedWriter(new FileWriter(currentFilePath,true));
-            int k = countLines() + 1;
-            bw.write("\n"+name+separator+age+separator+team+separator+pointMatch+separator+assistsGame
-                    +separator+reboundsGame+separator+steelGame+separator+blockGame);
-            AVLAssistsGame.insert(k,assistsGame);
-            AVLPointMatch.insert(k,pointMatch);
-            AVLReboundsGame.insert(k,reboundsGame);
-            AVLSteelGame.insert(k,steelGame);
-            bw.close();
-        }//end if
+        BufferedWriter bw = new BufferedWriter(new FileWriter(currentFilePath,true));
+        int k = countLines() + 1;
+        String toWrite = name+separator+age+separator+team+separator+pointMatch+separator+assistsGame
+                +separator+reboundsGame+separator+steelGame+separator+blockGame;
+        toWrite = (k == 1)?toWrite:"\n"+toWrite;
+        bw.write(toWrite);
+        AVLAssistsGame.insert(k,assistsGame);
+        AVLPointMatch.insert(k,pointMatch);
+        AVLReboundsGame.insert(k,reboundsGame);
+        AVLSteelGame.insert(k,steelGame);
+        bw.close();
     }//End addPlayer
 
     public void importDataFile(File data){

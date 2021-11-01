@@ -43,7 +43,9 @@ public class FIBAGUI {
 	@FXML private TextField searchValue;
 	@FXML private ChoiceBox<String> searchCriteria;
 	@FXML private ListView<Player> playerFound;
-
+	@FXML private MenuItem showInformation;
+	@FXML private MenuItem changeInformation;
+	@FXML private MenuItem deleInformation;
 	//Add Player Variables
 	@FXML private TextField addName;
 	@FXML private TextField AddYear;
@@ -162,6 +164,7 @@ public class FIBAGUI {
 		st.setWidth(1200);
 		st.setHeight(690);
 		loadSearchCriteria();
+		enableMenuItems(true);
 	}//End sherchPlayer
 
 	@FXML
@@ -171,15 +174,15 @@ public class FIBAGUI {
 		fxmlLoader.setController(this);
 		Parent login1 = fxmlLoader.load();
 		pane.setCenter(login1);
-
 	}
+
 	@FXML
 	public void focusButton(){
-		searchPlayerButton.setOpacity(0.68);
+		searchPlayerButton.setOpacity(1);
 	}//End focusButton
 	@FXML
 	public void unFocusButton(){
-		searchPlayerButton.setOpacity(1);
+		searchPlayerButton.setOpacity(0.68);
 	}//End focusButton
 	//Tremendo commit inutil
 	@FXML
@@ -207,6 +210,20 @@ public class FIBAGUI {
 		alert.setHeaderText(null);
 		alert.setContentText(msg);
 		alert.showAndWait();
+	}
+	@FXML
+	public void listenerSelectPlayer(){
+		Player p = playerFound.getSelectionModel().getSelectedItem();
+		if(p != null){
+			enableMenuItems(false);
+		}else{
+			enableMenuItems(true);
+		}
+	}//End listenerSelectPlayer
+	private void enableMenuItems(boolean e){
+		showInformation.setDisable(e);
+		changeInformation.setDisable(e);
+		deleInformation.setDisable(e);
 	}
 	/*@FXML
     void behind(ActionEvent event)throws Exception{

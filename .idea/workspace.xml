@@ -3,6 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/players_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collections/BBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BBT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Collections/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Search.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +67,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/runtime/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
