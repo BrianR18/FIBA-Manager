@@ -10,5 +10,7 @@ public class FIBAGUIEmergent {
     }//End constructor
 
     @FXML
-    public void showPlayerInformationWindow()
+    public void showPlayerInformationWindow(){
+        
+    }
 }

@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class CreateTrees extends Thread{
-    private final String separator = ";";
+    private final String separator = ",";
     private BST<Integer,Integer> tree;
     private final int index;
     private final File currentFilePath;

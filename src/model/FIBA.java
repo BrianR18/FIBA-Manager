@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class FIBA {
     private final String DEFAULT_FOLDER = "data\\players_data.csv";
-    private final String separator = ";";
+    private final String separator = ",";
     private BST<Integer,Integer> BSTBlockGame;//bg
     private BBT<Integer,Integer> AVLAssistsGame;//ag
     private BBT<Integer,Integer> AVLPointMatch;//pm
@@ -44,15 +44,36 @@ public class FIBA {
                 +separator+reboundsGame+separator+steelGame+separator+blockGame;
         toWrite = (k == 1)?toWrite:"\n"+toWrite;
         bw.write(toWrite);
+        System.out.println("Entrara a avlassist");
+        System.out.println("k es este: "+k);
+        System.out.println("assist es este uwu " + assistsGame);
         AVLAssistsGame.insert(k,assistsGame);
+        System.out.println("Entrara a avlpointmathc");
+        System.out.println("k es este: "+k);
+        System.out.println("point match es este uwu " + pointMatch);
         AVLPointMatch.insert(k,pointMatch);
+        System.out.println("Entrara a avl reboundGame");
+        System.out.println("k es este: "+k);
+        System.out.println("rebounds es este uwu " + reboundsGame);
         AVLReboundsGame.insert(k,reboundsGame);
+        System.out.println("Entrara steelGame");
+        System.out.println("k es este: "+k);
+        System.out.println("point match es este uwu " + steelGame);
         AVLSteelGame.insert(k,steelGame);
+        System.out.println("Entrara a bstblockGame");
+        System.out.println("k es este: "+k);
+        System.out.println("block es este uwu " + blockGame);
+        BSTBlockGame.insert(k,blockGame);
         bw.close();
     }//End addPlayer
 
     public void importDataFile(File data){
         currentFilePath = data;
+        BSTBlockGame = new BST<>();
+        AVLAssistsGame = new BBT<>();
+        AVLPointMatch = new BBT<>();
+        AVLReboundsGame = new BBT<>();
+        AVLSteelGame = new BBT<>();
         createTrees();
     }//End importDataFile
 

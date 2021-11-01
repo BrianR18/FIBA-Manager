@@ -9,8 +9,10 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public void insert(T node, S key) {
+        System.out.println("Se agregara "+key);
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (root == null) {
+            System.out.println("como raiz");
             root = nodeToAdd;
             root.setParent(null);
         } else {
@@ -23,6 +25,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
             if (actualNode.getRight() == null) {
                 actualNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
+                System.out.println("como hijo derecho de "+actualNode.getKey());
             } else {
                 insert(actualNode.getRight(), nodeToAdd);
             }
@@ -30,6 +33,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
             if (actualNode.getLeft() == null) {
                 actualNode.setLeft(nodeToAdd);
                 nodeToAdd.setParent(actualNode);
+                System.out.println("como hijo izquierdo de "+actualNode.getKey());
             } else {
                 insert(actualNode.getLeft(), nodeToAdd);
             }
@@ -41,7 +45,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     public ArrayList<T> search(S key) {
         ArrayList<T> valueFound = new ArrayList<>();
         if(isLeaf(root)) {
-            if (root.getKey() == key) {
+            if (root.getKey().compareTo(key)==0) {
                 valueFound.add(root.getValue());
                 return valueFound;
             } else {
@@ -53,22 +57,21 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     }
 
     private ArrayList<T> search(BSTNode<T,S> actual, S key, ArrayList<T> valueFound) {
-            if (actual.getKey() == key && isLeaf(actual)) {
+            if (actual.getKey().compareTo(key) == 0 && isLeaf(actual)) {
                 valueFound.add(actual.getValue());
                 return valueFound;
-            }
-            if(actual.getKey()==key) {
-                if(actual.getRight()!=null) {
-                    valueFound.add(actual.getValue());
-                     search(actual.getRight(), key, valueFound);
-                }else {
-                    valueFound.add(actual.getValue());
+            }else if (actual.getKey().compareTo(key) == 0) {
+                valueFound.add(actual.getValue());
+                if (actual.getRight() != null) {
+                    search(actual.getRight(), key, valueFound);
+                }
+                if(actual.getLeft() != null){
                     search(actual.getLeft(), key, valueFound);
                 }
-            }else{
-                if(actual.getRight()!=null) {
+            } else {
+                if (actual.getRight() != null) {
                     search(actual.getRight(), key, valueFound);
-                }else {
+                } if(actual.getLeft() != null){
                     search(actual.getLeft(), key, valueFound);
                 }
             }
