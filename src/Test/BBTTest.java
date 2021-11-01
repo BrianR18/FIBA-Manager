@@ -79,4 +79,14 @@ public class BBTTest {
         assertEquals("d",tree3.searchOneValue(4).getRight().getValue());
 
     }
+
+    @Test
+    public void insertTest2(){
+        BBT<String, Integer> tree = setupStage1();
+        tree.insert("a",213);
+        tree.insert("b",21);
+        tree.insert("c",23);
+        assertEquals("a",tree.getRoot().getValue());
+
+    }
 }
