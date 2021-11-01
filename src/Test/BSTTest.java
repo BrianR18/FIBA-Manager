@@ -210,7 +210,16 @@ public class BSTTest {
         assertNull(tree.searchOneValue(5).getLeft());
     }
 
-
+    @Test
+    public void deleteTest4(){
+        BST<String, Integer> tree = setupStage1();
+        tree.insert("a",233);
+        tree.insert("b",233);
+        tree.insert("c",233);
+        ArrayList<String> a = new ArrayList<>();
+        a.add("a");a.add("b");a.add("c");
+        
+    }
 
 
 }
