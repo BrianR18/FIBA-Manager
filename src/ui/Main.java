@@ -14,11 +14,13 @@ import model.FIBA;
 public class Main extends Application{
 	
 	private FIBAGUI FIBAGUI;
+	private FIBAGUIEmergent fe;
 	private FIBA FIBA;
 	
 	public Main() throws ClassNotFoundException, IOException {
 		FIBA = new FIBA();
-		FIBAGUI = new FIBAGUI(FIBA);
+		fe = new FIBAGUIEmergent(FIBA);
+		FIBAGUI = new FIBAGUI(FIBA,fe);
 		
 	}
 		public static void main(String[] args) {

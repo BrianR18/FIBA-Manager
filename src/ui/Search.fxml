@@ -29,9 +29,9 @@
       </Label>
       <ListView fx:id="playerFound" layoutX="597.0" layoutY="268.0" prefHeight="284.0" prefWidth="272.0">
          <contextMenu>
-            <ContextMenu>
+            <ContextMenu onShown="#listenerSelectPlayer">
               <items>
-                <MenuItem fx:id="showInformation" mnemonicParsing="false" text="Ver información" />
+                <MenuItem fx:id="showInformation" mnemonicParsing="false" onAction="#showPlayerInformation" text="Ver información" />
                   <MenuItem fx:id="changeInformation" mnemonicParsing="false" text="Modificar información" />
                   <MenuItem fx:id="deleInformation" mnemonicParsing="false" text="Eliminar de busquedad" />
               </items>

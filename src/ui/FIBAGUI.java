@@ -60,9 +60,10 @@ public class FIBAGUI {
 	//~~~~~~~~~~~~~~~~~~~~~~
 
 	@FXML private TextField pathTxt;
-
-	public FIBAGUI(FIBA controller) {
+	private FIBAGUIEmergent FE;
+	public FIBAGUI(FIBA controller,FIBAGUIEmergent FE) {
 		FIBA = controller;
+		this.FE = FE;
 	}
 
 
@@ -236,6 +237,13 @@ public class FIBAGUI {
 		showInformation.setDisable(e);
 		changeInformation.setDisable(e);
 		deleInformation.setDisable(e);
+	}
+
+	@FXML
+	public void showPlayerInformation() throws IOException {
+		Player p = playerFound.getSelectionModel().getSelectedItem();
+		FE.setCurrentPlayer(p);
+		FE.showPlayerInformationWindow();
 	}
 	/*@FXML
     void behind(ActionEvent event)throws Exception{

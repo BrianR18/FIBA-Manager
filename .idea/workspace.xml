@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/players_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUIEmergent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUIEmergent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Information.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Search.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Serch.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUIEmergent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUIEmergent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Information.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Search.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

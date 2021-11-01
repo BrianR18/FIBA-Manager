@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -13,6 +14,14 @@ import java.io.IOException;
 public class FIBAGUIEmergent {
     private FIBA fiba;
     private Player currentPlayer;
+    @FXML private Label ChanceName;
+    @FXML private Label ChanceYear;
+    @FXML private Label ChanceEquipo;
+    @FXML private Label pointMatchChance;
+    @FXML private Label reboundsGamechance;
+    @FXML private Label assistsGamechance;
+    @FXML private Label stealGamechance;
+    @FXML private Label blockGamechance;
 
     public FIBAGUIEmergent(FIBA f){
         fiba = f;
@@ -30,6 +39,7 @@ public class FIBAGUIEmergent {
         form.setScene(scene);
         form.setResizable(false);
         form.getIcons().add(new Image("/ui/image/FIBA.jpeg"));
+        loadPlayerInformation();
         form.showAndWait();
     }//End showPlayerInformationWindow
 
@@ -37,4 +47,14 @@ public class FIBAGUIEmergent {
         currentPlayer = p;
     }//End setCurrentPlayer
 
+    private void loadPlayerInformation(){
+        ChanceName.setText(currentPlayer.getName());
+        ChanceYear.setText(currentPlayer.getAge()+"");
+        ChanceEquipo.setText(currentPlayer.getTeam()+"");
+        pointMatchChance.setText(currentPlayer.getPointMatch()+"");
+        reboundsGamechance.setText(currentPlayer.getReboundsGame()+"");
+        assistsGamechance.setText(currentPlayer.getAssistsGame()+"");
+        stealGamechance.setText(currentPlayer.getStealGame()+"");
+        blockGamechance.setText(currentPlayer.getBlockGame()+"");
+    }
 }//FIBAGUIEmergent
