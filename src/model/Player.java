@@ -97,4 +97,9 @@ public class Player {
     public void setBlockGame(int blockGame) {
         this.blockGame = blockGame;
     }
+
+    @Override
+    public String toString(){
+        return name + ", " + team;
+    }
 }//End player Class

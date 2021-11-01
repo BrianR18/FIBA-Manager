@@ -212,6 +212,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
 
     @Override
     public boolean isLeaf(BSTNode<T,S> key){
+
         return key.getRight() == null && key.getLeft() == null;
     }
 

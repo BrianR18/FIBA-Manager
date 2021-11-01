@@ -31,9 +31,9 @@
          <contextMenu>
             <ContextMenu>
               <items>
-                <MenuItem fx:id="lookInformationMenu" mnemonicParsing="false" text="Ver información" />
-                  <MenuItem fx:id="modifiedInformationMenu" mnemonicParsing="false" text="Modificar información" />
-                  <MenuItem fx:id="deleteInfomationMenu" mnemonicParsing="false" text="Eliminar de busquedad" />
+                <MenuItem fx:id="showInformation" mnemonicParsing="false" text="Ver información" />
+                  <MenuItem fx:id="changeInformation" mnemonicParsing="false" text="Modificar información" />
+                  <MenuItem fx:id="deleInformation" mnemonicParsing="false" text="Eliminar de busquedad" />
               </items>
             </ContextMenu>
          </contextMenu>
