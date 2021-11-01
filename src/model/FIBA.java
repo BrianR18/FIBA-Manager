@@ -44,25 +44,10 @@ public class FIBA {
                 +separator+reboundsGame+separator+steelGame+separator+blockGame;
         toWrite = (k == 1)?toWrite:"\n"+toWrite;
         bw.write(toWrite);
-        System.out.println("Entrara a avlassist");
-        System.out.println("k es este: "+k);
-        System.out.println("assist es este uwu " + assistsGame);
         AVLAssistsGame.insert(k,assistsGame);
-        System.out.println("Entrara a avlpointmathc");
-        System.out.println("k es este: "+k);
-        System.out.println("point match es este uwu " + pointMatch);
         AVLPointMatch.insert(k,pointMatch);
-        System.out.println("Entrara a avl reboundGame");
-        System.out.println("k es este: "+k);
-        System.out.println("rebounds es este uwu " + reboundsGame);
         AVLReboundsGame.insert(k,reboundsGame);
-        System.out.println("Entrara steelGame");
-        System.out.println("k es este: "+k);
-        System.out.println("point match es este uwu " + steelGame);
         AVLSteelGame.insert(k,steelGame);
-        System.out.println("Entrara a bstblockGame");
-        System.out.println("k es este: "+k);
-        System.out.println("block es este uwu " + blockGame);
         BSTBlockGame.insert(k,blockGame);
         bw.close();
     }//End addPlayer
@@ -138,5 +123,18 @@ public class FIBA {
     }//End coutnLines
 
 
+    public void deletePlayer(Player playerToDelete){
+        int pointMatch = playerToDelete.getPointMatch();
+        int reboundsGame = playerToDelete.getReboundsGame();
+        int assistsGame = playerToDelete.getAssistsGame();
+        int stealGame = playerToDelete.getStealGame();
+        int blockGame = playerToDelete.getBlockGame();
+
+        BSTBlockGame.delete(BSTBlockGame.searchOneValue(blockGame));
+        AVLPointMatch.delete(AVLPointMatch.searchOneValue(pointMatch));
+        AVLAssistsGame.delete(AVLAssistsGame.searchOneValue(assistsGame));
+        AVLReboundsGame.delete(AVLReboundsGame.searchOneValue(reboundsGame));
+        AVLSteelGame.delete(AVLSteelGame.searchOneValue(stealGame));
+    }
 
 }//End FIBA

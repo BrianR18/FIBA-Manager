@@ -355,6 +355,12 @@ public class FIBAGUI {
 		}
 	}//End chooseImportFilePath
 
+
+	@FXML
+	public void playerToDelete(){
+		Player p = playerFound.getSelectionModel().getSelectedItem();
+		FIBA.deletePlayer(p);
+	}
 	   /* public void addClotheShirt(ActionEvent event) throws IOException {
 	        if (!txtShirtFabricType.getText().equals("") && !txtShirtStyle.getText().equals("") && !txtShirtType.getText().equals("")) {
 	            int price = Integer.parseInt(txtClothesPrice.getText());

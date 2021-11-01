@@ -8,12 +8,10 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
 
     @Override
     public void insert(T node, S key){
-        System.out.println("Se agregara "+key);
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (super.getRoot() == null) {
             super.setRoot(nodeToAdd);
             super.getRoot().setParent(null);
-            System.out.println("como raiz");
         } else {
             insert(super.getRoot(), nodeToAdd);
         }
@@ -25,7 +23,6 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             if (currentNode.getRight() == null) {
                 currentNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
-                System.out.println("como hijo derecho de "+currentNode.getKey());
                 rebalanced(currentNode.getParent());
             } else {
                 insert(currentNode.getRight(), nodeToAdd);
@@ -34,7 +31,6 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             if (currentNode.getLeft() == null) {
                 currentNode.setLeft(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
-                System.out.println("como hijo izquierdo de "+currentNode.getKey());
                 rebalanced(currentNode.getParent());
             } else {
                 insert(currentNode.getLeft(), nodeToAdd);
