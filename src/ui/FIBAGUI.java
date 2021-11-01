@@ -195,8 +195,16 @@ public class FIBAGUI {
 			try {
 				int key = Integer.parseInt(searchValue.getText());
 				ArrayList<Player> p = FIBA.searchPlayers(key,searchCriteria.getValue());
-				ObservableList<Player> player = FXCollections.observableList(p);
-				playerFound.setItems(player);
+				if(p!=null) {
+					System.out.println("Si habia valores");
+					for(int i = 0; i < p.size();i++){
+						System.out.print(p.get(i) + " ");
+					}
+					ObservableList<Player> player = FXCollections.observableList(p);
+					playerFound.setItems(player);
+				}else{
+					launchAlert("Error","No se encontraron usuarios con esas estadisticas");
+				}
 			}catch(NumberFormatException  e){
 				launchAlert("Valor incorrecto","El valor de busquedad debe ser un entero");
 			}catch (IOException e){

@@ -8,10 +8,12 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
 
     @Override
     public void insert(T node, S key){
+        System.out.println("Se agregara "+key);
         BSTNode<T,S> nodeToAdd = new BSTNode<T,S>(node, key);
         if (super.getRoot() == null) {
             super.setRoot(nodeToAdd);
             super.getRoot().setParent(null);
+            System.out.println("como raiz");
         } else {
             insert(super.getRoot(), nodeToAdd);
         }
@@ -23,6 +25,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             if (currentNode.getRight() == null) {
                 currentNode.setRight(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
+                System.out.println("como hijo derecho de "+currentNode.getKey());
                 rebalanced(currentNode.getParent());
             } else {
                 insert(currentNode.getRight(), nodeToAdd);
@@ -31,6 +34,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             if (currentNode.getLeft() == null) {
                 currentNode.setLeft(nodeToAdd);
                 nodeToAdd.setParent(currentNode);
+                System.out.println("como hijo izquierdo de "+currentNode.getKey());
                 rebalanced(currentNode.getParent());
             } else {
                 insert(currentNode.getLeft(), nodeToAdd);
@@ -91,6 +95,7 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
                 subTreeRoot.setLeft(null);
             super.getRoot().setRight(subTreeRoot);
             subTreeRoot.setParent(y);
+            super.getRoot().setParent(null);
         }//End if..else
     }//rightRotate
 
@@ -108,14 +113,16 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
                 subTreeRoot.setRight(null);
             super.getRoot().setLeft(subTreeRoot);
             subTreeRoot.setParent(y);
+            super.getRoot().setParent(null);
         }//End if..else
-    }//rightRotate
+    }//leftRotate
 
     private void leftRotateNotRoot(BSTNode<T,S> subTreeRoot, BSTNode<T,S> subTreeParent){
         boolean direction = subTreeParent.getLeft() == subTreeRoot;
         if(direction){subTreeParent.setLeft(subTreeRoot.getRight());}
         else{subTreeParent.setRight(subTreeRoot.getRight());}
-        subTreeRoot.getRight().setParent(subTreeParent);
+        //if(subTreeRoot.getRight()!=null)
+            subTreeRoot.getRight().setParent(subTreeParent);
         subTreeRoot.setRight(subTreeRoot.getRight().getLeft());
         if(subTreeRoot.getRight() != null)
             subTreeRoot.getRight().setParent(subTreeRoot);
@@ -138,10 +145,10 @@ public class BBT<T,S extends Comparable<S>> extends BST<T,S> {
             subTreeRoot.getLeft().setParent(subTreeRoot);
         if(direction){
             subTreeParent.getLeft().setRight(subTreeRoot);
-            subTreeRoot.setParent(subTreeParent.getRight());
+            subTreeRoot.setParent(subTreeParent.getLeft());
         } else{
             subTreeParent.getRight().setRight(subTreeRoot);
-            subTreeRoot.setParent(subTreeParent.getLeft());
+            subTreeRoot.setParent(subTreeParent.getRight());
         }//End if..else
     }//End rightRotateNotRoot
 

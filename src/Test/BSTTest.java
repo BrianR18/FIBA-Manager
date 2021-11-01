@@ -213,12 +213,12 @@ public class BSTTest {
     @Test
     public void deleteTest4(){
         BST<String, Integer> tree = setupStage1();
-        tree.insert("a",233);
-        tree.insert("b",233);
-        tree.insert("c",233);
+        tree.insert("a", 66);
+        tree.insert("b",6);
+        tree.insert("c",66);
         ArrayList<String> a = new ArrayList<>();
-        a.add("a");a.add("b");a.add("c");
-        
+        a.add("b");
+        assertEquals(a,tree.search(6));
     }
 
 

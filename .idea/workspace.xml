@@ -3,26 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="bac3223d-da53-455d-8c99-1ac2df388613" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/players_data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BBT.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Collections/BST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BBTTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BBTTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BSTTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/Test/BSTTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/FIBA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/model/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Config.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Config.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/FIBAGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FIBA-Manager/ui/Search.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Collections/BBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BBT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Collections/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Collections/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/BBTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/BBTTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/BSTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/BSTTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Thread/CreateTrees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thread/CreateTrees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FIBA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FIBA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Config.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Config.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/FIBAGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/FIBAGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Search.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +80,7 @@
       <recent name="C:\Users\Janna\Desktop\CUARTO SEMESTRE\Estructuras de datos\Programas\TI2\FIBA-Manager\src\Collections\BST" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BBTTest.insertTest2">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ui.Main" />
       <module name="FIBA-Manager" />
@@ -101,20 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.Main2" />
-      <module name="FIBA-Manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BBTTest.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BSTTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
@@ -123,14 +103,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.BBTTest" />
-      <option name="METHOD_NAME" value="insertTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BBTTest.insertTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BSTTest.deleteTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIBA-Manager" />
       <extension name="coverage">
         <pattern>
@@ -139,8 +118,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.BBTTest" />
-      <option name="METHOD_NAME" value="insertTest2" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
+      <option name="METHOD_NAME" value="deleteTest4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,6 +136,22 @@
       <option name="PACKAGE_NAME" value="Collections" />
       <option name="MAIN_CLASS_NAME" value="Collections.BSTTest" />
       <option name="METHOD_NAME" value="insertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BSTTest.searchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FIBA-Manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.BSTTest" />
+      <option name="METHOD_NAME" value="searchTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BBTTest.insertTest2" />
-        <item itemvalue="JUnit.BSTTest.searchTest1" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BBTTest.insertTest" />
-        <item itemvalue="Application.Main2" />
+        <item itemvalue="JUnit.BSTTest.deleteTest4" />
+        <item itemvalue="JUnit.BSTTest" />
+        <item itemvalue="JUnit.BSTTest.searchTest" />
+        <item itemvalue="JUnit.BSTTest.searchTest1" />
       </list>
     </recent_temporary>
   </component>
