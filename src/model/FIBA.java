@@ -137,4 +137,7 @@ public class FIBA {
         AVLSteelGame.delete(AVLSteelGame.searchOneValue(stealGame));
     }
 
+    public void modifiedPlayer(Player oldPlayer, Player newPlayer){
+        deletePlayer(oldPlayer);
+    }//End modifiedPlayer
 }//End FIBA
