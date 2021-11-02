@@ -211,7 +211,7 @@ public class BSTTest {
     }
 
     @Test
-    public void deleteTest4(){
+    public void searchTest2(){
         BST<String, Integer> tree = setupStage1();
         tree.insert("a", 66);
         tree.insert("b",6);
@@ -221,5 +221,82 @@ public class BSTTest {
         assertEquals(a,tree.search(6));
     }
 
+    @Test
+    public void deleteTest4(){
+        BST<String, Integer> tree = setupStage1();
+        //Testing when there is just one value in the tree
+        tree.insert("a", 66);
+        assertEquals("a",tree.getRoot().getValue());
+        assertTrue(tree.isLeaf(tree.getRoot()));
+        tree.delete(tree.searchOneValue(66));
+        assertNull(tree.getRoot());//now we have not a tree
+        //***********************************************
+        //Testing when the key to delete is a leaf but have parents
+        tree.insert("a",66);//right parent for 77 & left parent for 55
+        tree.insert("b",77);
+        tree.insert("c",55);
+        assertNotNull(tree.getRoot().getRight());
+        assertNotNull(tree.getRoot().getLeft());
+        tree.delete(tree.searchOneValue(77));
+        assertNull(tree.getRoot().getRight());
+        tree.delete(tree.searchOneValue(55));
+        assertNull(tree.getRoot().getLeft());//now we have just the root
+        //***********************************************
+        //Testing when the key has just one right child, and that key is in the right of the parent, root = 66
+        tree.insert("b",77);
+        tree.insert("c",88);
+        assertEquals("b",tree.getRoot().getRight().getValue());
+        tree.delete(tree.searchOneValue(77));
+        assertEquals("c",tree.getRoot().getRight().getValue());
+        tree.delete(tree.searchOneValue(88));//now we have just the root
+        //***********************************************
+        //Testing when the key has just one left child, and that key is in the right of the parent, root = 66
+        tree.insert("b",77);
+        tree.insert("c",70);
+        assertEquals("b",tree.getRoot().getRight().getValue());
+        tree.delete(tree.searchOneValue(77));
+        assertEquals("c",tree.getRoot().getRight().getValue());
+        tree.delete(tree.searchOneValue(70));//now we have just the root
+        //***********************************************
+        //Testing when the key has just one right child, and that key is in  the left of the parent, root = 66
+        tree.insert("b",55);
+        tree.insert("c",60);
+        assertEquals("b",tree.getRoot().getLeft().getValue());
+        tree.delete(tree.searchOneValue(55));
+        assertEquals("c",tree.getRoot().getLeft().getValue());
+        tree.delete(tree.searchOneValue(60));//now we have just the root
+        //***********************************************
+        //Testing when the key has just one left child, and that key is in  the left of the parent, root = 66
+        tree.insert("b",55);
+        tree.insert("c",50);
+        assertEquals("b",tree.getRoot().getLeft().getValue());
+        tree.delete(tree.searchOneValue(55));
+        assertEquals("c",tree.getRoot().getLeft().getValue());
+        tree.delete(tree.searchOneValue(50));//now we have just the root
+        //***********************************************
+        //Testing when the key has two children, and that key is in the right of the parent, root = 66
+        tree.insert("b",77);
+        tree.insert("c",70);
+        tree.insert("d",88);
+        assertEquals("d",tree.getSuccessor(tree.searchOneValue(77)).getValue());
+        tree.delete(tree.searchOneValue(77));
+        assertEquals("d",tree.getRoot().getRight().getValue());
+        assertEquals("c",tree.searchOneValue(88).getLeft().getValue());
+        assertNull(tree.searchOneValue(88).getRight());
+        assertEquals("a",tree.searchOneValue(88).getParent().getValue());
+        assertEquals("d",tree.searchOneValue(70).getParent().getValue());
+        //***********************************************
+        //Testing when the key has two children, and that key is in the left of the parent, root = 66
+        tree.insert("e",55);
+        tree.insert("f",50);
+        tree.insert("g",60);
+        assertEquals("g",tree.getSuccessor(tree.searchOneValue(55)).getValue());
+        tree.delete(tree.searchOneValue(55));
+        assertEquals("g",tree.getRoot().getLeft().getValue());
+        assertEquals("f",tree.searchOneValue(60).getLeft().getValue());
+        assertNull(tree.searchOneValue(60).getRight());
+        assertEquals("a",tree.searchOneValue(60).getParent().getValue());
+        assertEquals("g",tree.searchOneValue(50).getParent().getValue());
+    }
 
 }

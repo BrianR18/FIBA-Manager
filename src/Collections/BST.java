@@ -109,7 +109,7 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
                     parent.setRight(null);
                 }
             }else{
-                setNull(keyToDelete);
+                root = null;
             }
         }else{
             if(keyToDelete.getLeft()!=null && keyToDelete.getRight()!=null) {
@@ -126,16 +126,16 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
     private void delete2(BSTNode<T,S> keyToDelete) {
         //Case 2
         BSTNode<T,S> parent = keyToDelete.getParent();
-        if(parent.getRight()==keyToDelete) {
+        if(parent.getRight()==keyToDelete ) {
             if(keyToDelete.getLeft()!=null) {
                 parent.setRight(keyToDelete.getLeft());
                 keyToDelete.getLeft().setParent(parent);
-                setNull(keyToDelete);
+                keyToDelete=null;
             }else {
                 if(keyToDelete.getRight()!=null) {
                     parent.setRight(keyToDelete.getRight());
                     keyToDelete.getRight().setParent(parent);
-                    setNull(keyToDelete);
+                    keyToDelete=null;
                 }
             }
         }else {
@@ -143,12 +143,12 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
                 if(keyToDelete.getLeft()!=null) {
                     parent.setLeft(keyToDelete.getLeft());
                     keyToDelete.getLeft().setParent(parent);
-                    setNull(keyToDelete);
+                    keyToDelete=null;
                 }else {
                     if(keyToDelete.getRight()!=null) {
                         parent.setLeft(keyToDelete.getRight());
                         keyToDelete.getRight().setParent(parent);
-                        setNull(keyToDelete);
+                        keyToDelete=null;
                     }
                 }
             }
@@ -164,14 +164,14 @@ public class BST<T,S extends Comparable<S>> implements IBST<T,S> {
            successor.setLeft(keyToDelete.getLeft());
            successor.setParent(parent);
            successor.getLeft().setParent(successor);
-           setNull(keyToDelete);
+           keyToDelete=null;
         }else{
             if(parent.getLeft()==keyToDelete){
                 parent.setLeft(successor);
                 successor.setLeft(keyToDelete.getLeft());
                 successor.setParent(parent);
                 successor.getLeft().setParent(successor);
-                setNull(keyToDelete);
+                keyToDelete=null;
             }
         }
     }
